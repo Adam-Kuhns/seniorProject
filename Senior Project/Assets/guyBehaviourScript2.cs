@@ -17,17 +17,21 @@ public class guyBehaviourScript2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+      if (Input.GetKey(KeyCode.F))
+      {
+          m_Animator.SetTrigger("Attack");
+      }
         if (rb.velocity.y == 0)
         {
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 rb.velocity = new Vector2(-5, rb.velocity.y);
-                m_Animator.SetTrigger("Walk");
+                m_Animator.SetTrigger("Walk2");
             }
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 rb.velocity = new Vector2(5, rb.velocity.y);
-                m_Animator.SetTrigger("Walk");
+                m_Animator.SetTrigger("Walk2");
             }
             if (Input.GetKey(KeyCode.UpArrow))
             {
@@ -36,7 +40,7 @@ public class guyBehaviourScript2 : MonoBehaviour
         }
         if (rb.velocity.x == 0)
         {
-            m_Animator.SetTrigger("StopWalk");
+            m_Animator.SetTrigger("StopWalk2");
         }
     }
 }
