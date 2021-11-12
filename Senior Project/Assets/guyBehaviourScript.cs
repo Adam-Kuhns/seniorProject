@@ -17,6 +17,17 @@ public class guyBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float hDirection = Input.GetAxis("Horizontal");
+        //Moving Left
+        if (hDirection < 0)
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
+        //Moving Right
+        else if (hDirection > 0)
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
         if (rb.velocity.y == 0)
         {
             if (Input.GetKey(KeyCode.A))
