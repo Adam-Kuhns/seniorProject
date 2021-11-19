@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Background
+  - Entity
+  - Tilemap
   - 
   - 
   - 
@@ -43,6 +43,9 @@ TagManager:
     locked: 0
   - name: Back
     uniqueID: 1695499025
+    locked: 0
+  - name: Tilemap
+    uniqueID: 2523126949
     locked: 0
   - name: Entity
     uniqueID: 4201668589
