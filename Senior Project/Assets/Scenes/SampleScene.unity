@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b9ec6ed074262f4496009951275b746, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8975388125684555458, guid: d1fdac0ccbb50274b83d968b59a1bc1d, type: 3}
 --- !u!68 &370851273
 EdgeCollider2D:
   m_ObjectHideFlags: 0
