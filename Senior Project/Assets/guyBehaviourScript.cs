@@ -50,6 +50,8 @@ public class guyBehaviourScript : MonoBehaviour
 
     void Shoot()
     {
+        m_Animator.ResetTrigger("Shoot");
+
         if (transform.localScale.x > 0)
         {
             bullet = Instantiate(bulletPrefab, new Vector2(transform.position.x + 1f, transform.position.y + 0.2f), Quaternion.identity);

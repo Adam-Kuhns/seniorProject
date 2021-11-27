@@ -43,4 +43,9 @@ public class guyBehaviourScript2 : MonoBehaviour
             m_Animator.SetTrigger("StopWalk2");
         }
     }
+
+    void Attack()
+    {
+        m_Animator.ResetTrigger("Attack");
+    }
 }
