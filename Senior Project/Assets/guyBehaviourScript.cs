@@ -14,6 +14,7 @@ public class guyBehaviourScript : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         m_Animator = gameObject.GetComponent<Animator>();
+        //Time.timeScale = 0.25f;
     }
 
     // Update is called once per frame
@@ -21,6 +22,10 @@ public class guyBehaviourScript : MonoBehaviour
     {
         if (rb.velocity.y == 0)
         {
+            if(m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
+            {
+                m_Animator.SetTrigger("StopJump");
+            }
             if (Input.GetKey(KeyCode.A))
             {
                 rb.velocity = new Vector2(-5, rb.velocity.y);
@@ -36,6 +41,7 @@ public class guyBehaviourScript : MonoBehaviour
             if (Input.GetKey(KeyCode.Space))
             {
                 rb.velocity = new Vector2(rb.velocity.x, 5);
+                m_Animator.SetTrigger("Jump");
             }
             if (Input.GetKey(KeyCode.E))
             {
