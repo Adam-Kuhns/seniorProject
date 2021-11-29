@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Background
-  - Entity
-  - Tilemap
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -41,15 +41,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Back
-    uniqueID: 1695499025
+  - name: Layer1
+    uniqueID: 90010265
     locked: 0
-  - name: Tilemap
-    uniqueID: 2523126949
+  - name: Layer2
+    uniqueID: 635578513
     locked: 0
-  - name: Entity
-    uniqueID: 4201668589
+  - name: Layer3
+    uniqueID: 2471056521
     locked: 0
-  - name: Fore
-    uniqueID: 2768712843
+  - name: Layer4
+    uniqueID: 3887158443
     locked: 0
