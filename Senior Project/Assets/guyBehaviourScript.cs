@@ -57,16 +57,17 @@ public class guyBehaviourScript : MonoBehaviour
     void Shoot()
     {
         m_Animator.ResetTrigger("Shoot");
+        GetComponent<AudioSource>().Play();
 
         if (transform.localScale.x > 0)
         {
             bullet = Instantiate(bulletPrefab, new Vector2(transform.position.x + 1f, transform.position.y + 0.2f), Quaternion.identity);
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(20, 0);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(15, 0);
         }
         else
         {
             bullet = Instantiate(bulletPrefab, new Vector2(transform.position.x - 1f, transform.position.y + 0.2f), Quaternion.identity);
-            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-20, 0);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-15, 0);
         }
     }
 }
