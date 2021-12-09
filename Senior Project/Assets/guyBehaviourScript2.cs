@@ -35,7 +35,7 @@ public class guyBehaviourScript2 : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.UpArrow))
             {
-                rb.velocity = new Vector2(rb.velocity.x, 5);
+                rb.velocity = new Vector2(rb.velocity.x, 7);
             }
         }
         if (rb.velocity.x == 0)

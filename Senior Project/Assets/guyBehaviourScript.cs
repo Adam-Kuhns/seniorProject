@@ -40,7 +40,7 @@ public class guyBehaviourScript : MonoBehaviour
             }
             if (Input.GetKey(KeyCode.Space))
             {
-                rb.velocity = new Vector2(rb.velocity.x, 5);
+                rb.velocity = new Vector2(rb.velocity.x, 7);
                 m_Animator.SetTrigger("Jump");
             }
             if (Input.GetKey(KeyCode.E))

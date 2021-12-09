@@ -24,7 +24,7 @@ public class playerCombat : MonoBehaviour
           foreach (Collider2D enemy in hitEnemies)
           {
             Debug.Log(enemy);
-            DestroyImmediate(enemy);
+            DestroyImmediate(enemy.gameObject);
           }
         }
     }
