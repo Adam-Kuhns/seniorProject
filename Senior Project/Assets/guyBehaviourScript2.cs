@@ -6,6 +6,8 @@ public class guyBehaviourScript2 : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator m_Animator;
+    private float attackRange = 0.5f;
+    public Transform attackPoint;
 
     // Start is called before the first frame update
     void Start()
@@ -17,10 +19,10 @@ public class guyBehaviourScript2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if (Input.GetKey(KeyCode.F))
-      {
-          m_Animator.SetTrigger("Attack");
-      }
+        if (Input.GetKey(KeyCode.F))
+        {
+            m_Animator.SetTrigger("Attack");
+        }
         if (rb.velocity.y == 0)
         {
             if (Input.GetKey(KeyCode.LeftArrow))
@@ -47,5 +49,13 @@ public class guyBehaviourScript2 : MonoBehaviour
     void Attack()
     {
         m_Animator.ResetTrigger("Attack");
+        LayerMask mask = LayerMask.GetMask("Players");
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, mask);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            Debug.Log(enemy);
+            GameObject.Destroy(enemy.gameObject);
+        }
     }
 }
