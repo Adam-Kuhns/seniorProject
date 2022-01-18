@@ -26,28 +26,56 @@ public class guyBehaviourScript : MonoBehaviour
             {
                 m_Animator.SetTrigger("StopJump");
             }
+            if (Input.GetKey(KeyCode.Space))
+            {
+                rb.velocity = new Vector2(rb.velocity.x, 7);
+                m_Animator.SetTrigger("Jump");
+            }
             if (Input.GetKey(KeyCode.A))
             {
-                rb.velocity = new Vector2(-5, rb.velocity.y);
+                if (rb.velocity.x > -5)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x - 0.3f, rb.velocity.y);
+                }
                 transform.localScale = new Vector2(-1, 1);
                 m_Animator.SetTrigger("Walk");
             }
             if (Input.GetKey(KeyCode.D))
             {
-                rb.velocity = new Vector2(5, rb.velocity.y);
+                if (rb.velocity.x < 5)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
+                }
                 transform.localScale = new Vector2(1, 1);
                 m_Animator.SetTrigger("Walk");
-            }
-            if (Input.GetKey(KeyCode.Space))
-            {
-                rb.velocity = new Vector2(rb.velocity.x, 7);
-                m_Animator.SetTrigger("Jump");
             }
             if (Input.GetKey(KeyCode.E))
             {
                 m_Animator.SetTrigger("Shoot");
             }
         }
+        else
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+                if (rb.velocity.x > -5)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x - 0.1f, rb.velocity.y);
+                }
+                transform.localScale = new Vector2(-1, 1);
+                m_Animator.SetTrigger("Walk");
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                if (rb.velocity.x < 5)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x + 0.1f, rb.velocity.y);
+                }
+                transform.localScale = new Vector2(1, 1);
+                m_Animator.SetTrigger("Walk");
+            }
+        }
+
         if (rb.velocity.x == 0)
         {
             m_Animator.SetTrigger("StopWalk");
