@@ -1062,7 +1062,7 @@ GameObject:
   - component: {fileID: 875011191}
   - component: {fileID: 875011193}
   m_Layer: 0
-  m_Name: blank (1)
+  m_Name: Invisible Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1171,7 +1171,7 @@ GameObject:
   - component: {fileID: 933130722}
   - component: {fileID: 933130724}
   m_Layer: 0
-  m_Name: blank
+  m_Name: Invisible Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1815,7 +1815,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.6157217
+  orthographic size: 3
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2346,7 +2346,7 @@ GameObject:
   - component: {fileID: 1582644609}
   - component: {fileID: 1582644608}
   m_Layer: 0
-  m_Name: blank (2)
+  m_Name: Invisible Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10538,13 +10538,23 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 2, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 2
+      m_TileSpriteIndex: 2
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
   - m_RefCount: 60
     m_Data: {fileID: 11400000, guid: 73a0258137ed0ee43af3a05a681bccf5, type: 2}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: d5eee58e537030649adb0523058b1f4f, type: 2}
   - m_RefCount: 660
     m_Data: {fileID: 11400000, guid: 9db3c521ff939a0419f46190721397b2, type: 2}
@@ -10559,7 +10569,7 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 60
     m_Data: {fileID: 21300000, guid: 8eb3283a56dde4d46ae433adec18d833, type: 3}
-  - m_RefCount: 1
+  - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 1e41537975a6da94aa05a59104d3a0f6, type: 3}
   - m_RefCount: 660
     m_Data: {fileID: 21300000, guid: 2dbd96895e310eb489e69f59266e0a2c, type: 3}
@@ -10570,7 +10580,7 @@ Tilemap:
   - m_RefCount: 21
     m_Data: {fileID: 21300000, guid: 1b0d699e4691b9e4c93e18694b7484eb, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 781
+  - m_RefCount: 782
     m_Data:
       e00: 1
       e01: 0
@@ -10607,7 +10617,7 @@ Tilemap:
       e32: 6e-45
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 781
+  - m_RefCount: 782
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -10849,7 +10859,7 @@ GameObject:
   - component: {fileID: 1981098988}
   - component: {fileID: 1981098987}
   m_Layer: 0
-  m_Name: blank (3)
+  m_Name: Invisible Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
