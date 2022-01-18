@@ -8,6 +8,8 @@ public class guyBehaviourScript2 : MonoBehaviour
     private Animator m_Animator;
     private float attackRange = 0.5f;
     public Transform attackPoint;
+    public Transform Player;
+    private int MinDist = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -19,21 +21,29 @@ public class guyBehaviourScript2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.F))
+        //if (Input.GetKey(KeyCode.F))
+        if (Vector2.Distance(transform.position, Player.position) <= MinDist)
         {
             m_Animator.SetTrigger("Attack");
         }
         if (rb.velocity.y == 0)
         {
-            if (Input.GetKey(KeyCode.LeftArrow))
+            if (Vector2.Distance(transform.position, Player.position) >= MinDist)
             {
-                rb.velocity = new Vector2(-5, rb.velocity.y);
-                m_Animator.SetTrigger("Walk2");
-            }
-            if (Input.GetKey(KeyCode.RightArrow))
-            {
-                rb.velocity = new Vector2(5, rb.velocity.y);
-                m_Animator.SetTrigger("Walk2");
+                //if (Input.GetKey(KeyCode.LeftArrow))
+                if (Player.position.x < transform.position.x)
+                {
+                    rb.velocity = new Vector2(-5, rb.velocity.y);
+                    transform.localScale = new Vector2(1, 1);
+                    m_Animator.SetTrigger("Walk2");
+                }
+                //if (Input.GetKey(KeyCode.RightArrow))
+                if (Player.position.x > transform.position.x)
+                {
+                    rb.velocity = new Vector2(5, rb.velocity.y);
+                    transform.localScale = new Vector2(-1, 1);
+                    m_Animator.SetTrigger("Walk2");
+                }
             }
             if (Input.GetKey(KeyCode.UpArrow))
             {
