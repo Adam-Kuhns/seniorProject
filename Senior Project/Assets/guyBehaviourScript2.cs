@@ -45,14 +45,35 @@ public class guyBehaviourScript2 : MonoBehaviour
                     m_Animator.SetTrigger("Walk2");
                 }
             }
-            if (Input.GetKey(KeyCode.UpArrow))
+            /*if (Input.GetKey(KeyCode.UpArrow))
             {
                 rb.velocity = new Vector2(rb.velocity.x, 7);
-            }
+            }*/
         }
         if (rb.velocity.x == 0)
         {
             m_Animator.SetTrigger("StopWalk2");
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        foreach (ContactPoint2D contact in collision.contacts) {
+            if (Mathf.Abs(contact.normal.x) > Mathf.Abs(contact.normal.y))
+            {
+                // Horizontal Collision
+                rb.velocity = new Vector2(rb.velocity.x, 7);
+                if(contact.normal.x > 0)
+                {
+                    // Left Side Collision
+                    rb.velocity = new Vector2(-1, rb.velocity.y);
+                }
+                if(contact.normal.x < 0)
+                {
+                    // Right Side Collision
+                    rb.velocity = new Vector2(1, rb.velocity.y);
+                }
+            }
         }
     }
 
