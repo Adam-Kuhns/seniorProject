@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static HealthBar;
 
 public class guyBehaviourScript2 : MonoBehaviour
 {

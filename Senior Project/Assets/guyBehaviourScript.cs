@@ -2,8 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 public class guyBehaviourScript : MonoBehaviour
 {
+
+    public int maxHealth = 10;
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
     private Rigidbody2D rb;
     private Animator m_Animator;
     private GameObject bullet;
@@ -15,6 +23,9 @@ public class guyBehaviourScript : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
         m_Animator = gameObject.GetComponent<Animator>();
         //Time.timeScale = 0.25f;
+
+        currentHealth = maxHealth;
+		    healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -30,6 +41,8 @@ public class guyBehaviourScript : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, 7);
                 m_Animator.SetTrigger("Jump");
+
+                TakeDamage(1);
             }
             if (Input.GetKey(KeyCode.A))
             {
@@ -98,4 +111,12 @@ public class guyBehaviourScript : MonoBehaviour
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-15, 0);
         }
     }
+
+    void TakeDamage(int damage)
+	  {
+		    currentHealth -= damage;
+
+		    healthBar.SetHealth(currentHealth);
+	  }
+
 }
