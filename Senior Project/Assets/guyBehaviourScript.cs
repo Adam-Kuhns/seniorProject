@@ -22,9 +22,11 @@ public class guyBehaviourScript : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         m_Animator = gameObject.GetComponent<Animator>();
+
         //Time.timeScale = 0.25f;
 
         currentHealth = maxHealth;
+        healthBar.Initialize();
 		healthBar.SetMaxHealth(maxHealth);
     }
 
