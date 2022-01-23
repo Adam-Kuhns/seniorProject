@@ -343,7 +343,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1039959231}
   bulletPrefab: {fileID: 8975388125684555458, guid: d1fdac0ccbb50274b83d968b59a1bc1d, type: 3}
 --- !u!68 &370851273
 EdgeCollider2D:
@@ -1439,6 +1439,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1039959229}
   - component: {fileID: 1039959230}
+  - component: {fileID: 1039959231}
   m_Layer: 5
   m_Name: Health bar
   m_TagString: Untagged
@@ -1518,6 +1519,18 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1039959231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1039959228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895aa887be2d24fc2b6bcb933ae6ab5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1087567302
 GameObject:
   m_ObjectHideFlags: 0
@@ -2049,7 +2062,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.42276
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

@@ -25,7 +25,7 @@ public class guyBehaviourScript : MonoBehaviour
         //Time.timeScale = 0.25f;
 
         currentHealth = maxHealth;
-		    healthBar.SetMaxHealth(maxHealth);
+		healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -113,10 +113,10 @@ public class guyBehaviourScript : MonoBehaviour
     }
 
     void TakeDamage(int damage)
-	  {
-		    currentHealth -= damage;
+	{
+        currentHealth -= damage;
 
-		    healthBar.SetHealth(currentHealth);
-	  }
+	    healthBar.SetHealth(currentHealth);
+	}
 
 }
