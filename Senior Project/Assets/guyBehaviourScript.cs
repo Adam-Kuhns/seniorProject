@@ -12,6 +12,12 @@ public class guyBehaviourScript : MonoBehaviour
     private GameObject bullet;
     public GameObject bulletPrefab;
 
+
+    public int maxHealth = 10;
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +25,9 @@ public class guyBehaviourScript : MonoBehaviour
         m_Animator = gameObject.GetComponent<Animator>();
 
         //Time.timeScale = 0.25f;
-
+        currentHealth = maxHealth;
+        healthBar.Initialize();
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -36,7 +44,7 @@ public class guyBehaviourScript : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, 7);
                 m_Animator.SetTrigger("Jump");
 
-                
+
             }
             if (Input.GetKey(KeyCode.A))
             {
@@ -105,6 +113,13 @@ public class guyBehaviourScript : MonoBehaviour
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-15, 0);
         }
     }
+
+    public void TakeDamage(int damage)
+	   {
+        currentHealth -= damage;
+
+	       healthBar.SetHealth(currentHealth);
+	   }
 
 
 }
