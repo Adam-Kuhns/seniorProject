@@ -7,11 +7,6 @@ using UnityEngine;
 public class guyBehaviourScript : MonoBehaviour
 {
 
-    public int maxHealth = 10;
-    public int currentHealth;
-
-    public HealthBar healthBar;
-
     private Rigidbody2D rb;
     private Animator m_Animator;
     private GameObject bullet;
@@ -25,9 +20,6 @@ public class guyBehaviourScript : MonoBehaviour
 
         //Time.timeScale = 0.25f;
 
-        currentHealth = maxHealth;
-        healthBar.Initialize();
-		healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -44,7 +36,7 @@ public class guyBehaviourScript : MonoBehaviour
                 rb.velocity = new Vector2(rb.velocity.x, 7);
                 m_Animator.SetTrigger("Jump");
 
-                TakeDamage(1);
+                
             }
             if (Input.GetKey(KeyCode.A))
             {
@@ -114,11 +106,5 @@ public class guyBehaviourScript : MonoBehaviour
         }
     }
 
-    void TakeDamage(int damage)
-	{
-        currentHealth -= damage;
-
-	    healthBar.SetHealth(currentHealth);
-	}
 
 }

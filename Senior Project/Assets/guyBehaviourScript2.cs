@@ -12,11 +12,20 @@ public class guyBehaviourScript2 : MonoBehaviour
     public Transform Player;
     private int MinDist = 1;
 
+    public int maxHealth = 10;
+    public int currentHealth;
+
+    public HealthBar healthBar;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         m_Animator = gameObject.GetComponent<Animator>();
+
+        currentHealth = maxHealth;
+        healthBar.Initialize();
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
@@ -78,6 +87,13 @@ public class guyBehaviourScript2 : MonoBehaviour
         }
     }
 
+    void TakeDamage(int damage)
+	   {
+        currentHealth -= damage;
+
+	       healthBar.SetHealth(currentHealth);
+	   }
+
     void Attack()
     {
         m_Animator.ResetTrigger("Attack");
@@ -87,7 +103,10 @@ public class guyBehaviourScript2 : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log(enemy);
-            GameObject.Destroy(enemy.gameObject);
+            TakeDamage(1);
         }
+
+
+
     }
 }
