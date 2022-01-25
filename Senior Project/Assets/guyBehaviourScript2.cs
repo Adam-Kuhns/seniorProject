@@ -104,6 +104,10 @@ public class guyBehaviourScript2 : MonoBehaviour
         {
             Debug.Log(enemy);
             TakeDamage(1);
+            if(currentHealth <= 0)
+            {
+              GameObject.Destroy(enemy.gameObject);
+            }
         }
 
 
