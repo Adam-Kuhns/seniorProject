@@ -252,7 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 304598539}
   m_Layer: 0
-  m_Name: Layer3
+  m_Name: Level
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -636,7 +636,7 @@ GameObject:
   - component: {fileID: 452960766}
   m_Layer: 0
   m_Name: enemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -991,7 +991,7 @@ GameObject:
   m_Component:
   - component: {fileID: 788291160}
   m_Layer: 0
-  m_Name: Layer4
+  m_Name: Characters
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1456,7 +1456,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1087567303}
   m_Layer: 0
-  m_Name: Layer2
+  m_Name: Scenery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
