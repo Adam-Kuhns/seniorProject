@@ -35,35 +35,6 @@ public class guyBehaviourScript : MonoBehaviour
     {
         if (rb.velocity.y == 0)
         {
-            if(m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
-            {
-                m_Animator.SetTrigger("StopJump");
-            }
-            if (Input.GetKey(KeyCode.Space))
-            {
-                rb.velocity = new Vector2(rb.velocity.x, 7);
-                m_Animator.SetTrigger("Jump");
-
-
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                if (rb.velocity.x > -5)
-                {
-                    rb.velocity = new Vector2(rb.velocity.x - 0.3f, rb.velocity.y);
-                }
-                transform.localScale = new Vector2(-1, 1);
-                m_Animator.SetTrigger("Walk");
-            }
-            if (Input.GetKey(KeyCode.D))
-            {
-                if (rb.velocity.x < 5)
-                {
-                    rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
-                }
-                transform.localScale = new Vector2(1, 1);
-                m_Animator.SetTrigger("Walk");
-            }
             if (Input.GetKey(KeyCode.E))
             {
                 m_Animator.SetTrigger("Shoot");
@@ -97,6 +68,43 @@ public class guyBehaviourScript : MonoBehaviour
         }
     }
 
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            if (contact.normal.y > 0)
+            {
+                if (m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
+                {
+                    m_Animator.SetTrigger("StopJump");
+                }
+                if (Input.GetKey(KeyCode.Space))
+                {
+                    rb.velocity = new Vector2(rb.velocity.x, 7);
+                    m_Animator.SetTrigger("Jump");
+                }
+                if (Input.GetKey(KeyCode.A))
+                {
+                    if (rb.velocity.x > -5)
+                    {
+                        rb.velocity = new Vector2(rb.velocity.x - 0.3f, rb.velocity.y);
+                    }
+                    transform.localScale = new Vector2(-1, 1);
+                    m_Animator.SetTrigger("Walk");
+                }
+                if (Input.GetKey(KeyCode.D))
+                {
+                    if(rb.velocity.x < 5)
+                    {
+                        rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
+                    }
+                    transform.localScale = new Vector2(1, 1);
+                    m_Animator.SetTrigger("Walk");
+                }
+            }
+        }
+    }
+
     void Shoot()
     {
         m_Animator.ResetTrigger("Shoot");
@@ -115,11 +123,9 @@ public class guyBehaviourScript : MonoBehaviour
     }
 
     public void TakeDamage(int damage)
-	   {
+	{
         currentHealth -= damage;
 
-	       healthBar.SetHealth(currentHealth);
-	   }
-
-
+	    healthBar.SetHealth(currentHealth);
+	}
 }
