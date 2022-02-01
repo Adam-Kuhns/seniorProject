@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1360
     height: 627
-  m_MinSize: {x: 679, y: 592}
-  m_MaxSize: {x: 14001, y: 18042}
+  m_MinSize: {x: 677, y: 592}
+  m_MaxSize: {x: 14000, y: 18042}
   vertical: 0
-  controlID: 133
+  controlID: 1073
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -136,10 +136,10 @@ MonoBehaviour:
     y: 0
     width: 1010
     height: 627
-  m_MinSize: {x: 403, y: 592}
+  m_MinSize: {x: 402, y: 592}
   m_MaxSize: {x: 10000, y: 18042}
   vertical: 1
-  controlID: 134
+  controlID: 1074
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -161,10 +161,10 @@ MonoBehaviour:
     y: 0
     width: 1010
     height: 226
-  m_MinSize: {x: 403, y: 221}
-  m_MaxSize: {x: 8003, y: 4021}
+  m_MinSize: {x: 402, y: 221}
+  m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 19
+  controlID: 1045
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -221,7 +221,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 46fbffff
+      m_ExpandedIDs: 46fbffff344400003a440000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -309,9 +309,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.2820927, y: -0.08191189, z: -119.35432}
+    m_Target: {x: -5.8541903, y: -1.5439055, z: -148.01694}
     speed: 2
-    m_Value: {x: 1.2820927, y: -0.08191189, z: -119.35432}
+    m_Value: {x: -5.8541903, y: -1.5439055, z: -148.01694}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -348,9 +348,9 @@ MonoBehaviour:
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 0.5, y: 0.5}
@@ -362,9 +362,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.055326
+    m_Target: 3.8773408
     speed: 2
-    m_Value: 2.055326
+    m_Value: 3.8773408
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -548,23 +548,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/tiles/newTiles
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 69
   m_LastFolders:
-  - Assets
+  - Assets/tiles/newTiles
   m_LastFoldersGridSize: 69
   m_LastProjectPath: C:\Users\TJKun\OneDrive\Documents\GitHub\seniorProject\Senior
     Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1a460000
-    m_LastClickedID: 17946
-    m_ExpandedIDs: 000000001a46000000ca9a3b
+    scrollPos: {x: 0, y: 4}
+    m_SelectedIDs: 78460000
+    m_LastClickedID: 18040
+    m_ExpandedIDs: 000000004e4600007646000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -592,7 +592,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001a460000
+    m_ExpandedIDs: 000000004e46000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -617,8 +617,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: ca440000
-    m_LastClickedInstanceID: 17610
+    m_SelectedInstanceIDs: fa440000
+    m_LastClickedInstanceID: 17658
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300002a42000084450000
     m_RenameOverlay:
@@ -644,7 +644,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 8}
     m_GridSize: 69
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -756,7 +756,7 @@ MonoBehaviour:
     m_CachedPref: 162
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 17610
+  m_LastInspectedObjectInstanceID: 17658
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:
