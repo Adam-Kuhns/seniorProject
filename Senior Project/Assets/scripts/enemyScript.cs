@@ -11,7 +11,7 @@ public class enemyScript : MonoBehaviour
     private float attackRange = 1f;
     public Transform attackPoint;
     public Transform Player;
-    private int MinDist = 1;
+    private int MinDist = 2;
 
     public guyBehaviourScript guy1;
 
@@ -102,8 +102,5 @@ public class enemyScript : MonoBehaviour
                 SceneManager.LoadScene("DeathMenu");
             }
         }
-
-
-
     }
 }
