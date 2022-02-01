@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using static HealthBar;
+using UnityEngine.SceneManagement;
 
 public class guyBehaviourScript2 : MonoBehaviour
 {
@@ -96,7 +97,9 @@ public class guyBehaviourScript2 : MonoBehaviour
             guy1.TakeDamage(1);
             if(guy1.currentHealth <= 0)
             {
-              GameObject.Destroy(enemy.gameObject);
+                
+              //GameObject.Destroy(enemy.gameObject);
+                SceneManager.LoadScene("DeathMenu");
             }
         }
 
