@@ -35,19 +35,25 @@ public class enemyScript : MonoBehaviour
         }
         if (rb.velocity.y == 0)
         {
-            if (Vector2.Distance(transform.position, Player.position) >= MinDist)
+            if (Mathf.Abs(Player.position.x - transform.position.x) >= MinDist)
             {
                 //if (Input.GetKey(KeyCode.LeftArrow))
                 if (Player.position.x < transform.position.x)
                 {
-                    rb.velocity = new Vector2(-4, rb.velocity.y);
+                    if (rb.velocity.x > -4)
+                    {
+                        rb.velocity = new Vector2(rb.velocity.x - 0.3f, rb.velocity.y);
+                    }
                     transform.localScale = new Vector2(1, 1);
                     m_Animator.SetTrigger("Walk2");
                 }
                 //if (Input.GetKey(KeyCode.RightArrow))
                 if (Player.position.x > transform.position.x)
                 {
-                    rb.velocity = new Vector2(4, rb.velocity.y);
+                    if (rb.velocity.x < 4)
+                    {
+                        rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
+                    }
                     transform.localScale = new Vector2(-1, 1);
                     m_Animator.SetTrigger("Walk2");
                 }
