@@ -33,33 +33,27 @@ public class guyBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (rb.velocity.y == 0)
+        if (Input.GetKey(KeyCode.E))
         {
-            if (Input.GetKey(KeyCode.E))
-            {
-                m_Animator.SetTrigger("Shoot");
-            }
+            m_Animator.SetTrigger("Shoot");
         }
-        else
+        if (Input.GetKey(KeyCode.A))
         {
-            if (Input.GetKey(KeyCode.A))
+            if (rb.velocity.x > -5)
             {
-                if (rb.velocity.x > -5)
-                {
-                    rb.velocity = new Vector2(rb.velocity.x - 0.1f, rb.velocity.y);
-                }
-                transform.localScale = new Vector2(-1, 1);
-                m_Animator.SetTrigger("Walk");
+                rb.velocity = new Vector2(rb.velocity.x - 0.1f, rb.velocity.y);
             }
-            if (Input.GetKey(KeyCode.D))
+            transform.localScale = new Vector2(-1, 1);
+            m_Animator.SetTrigger("Walk");
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            if (rb.velocity.x < 5)
             {
-                if (rb.velocity.x < 5)
-                {
-                    rb.velocity = new Vector2(rb.velocity.x + 0.1f, rb.velocity.y);
-                }
-                transform.localScale = new Vector2(1, 1);
-                m_Animator.SetTrigger("Walk");
+                rb.velocity = new Vector2(rb.velocity.x + 0.1f, rb.velocity.y);
             }
+            transform.localScale = new Vector2(1, 1);
+            m_Animator.SetTrigger("Walk");
         }
 
         if (rb.velocity.x == 0)

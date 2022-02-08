@@ -11,7 +11,7 @@ public class enemyScript : MonoBehaviour
     private float attackRange = 1f;
     public Transform attackPoint;
     public Transform Player;
-    private int MinDist = 2;
+    private int MinDist = 1;
 
     public guyBehaviourScript guy1;
 
@@ -21,14 +21,11 @@ public class enemyScript : MonoBehaviour
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         m_Animator = gameObject.GetComponent<Animator>();
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Input.GetKey(KeyCode.F))
         if (Vector2.Distance(transform.position, Player.position) <= MinDist)
         {
             m_Animator.SetTrigger("Attack");
@@ -37,7 +34,6 @@ public class enemyScript : MonoBehaviour
         {
             if (Mathf.Abs(Player.position.x - transform.position.x) >= MinDist)
             {
-                //if (Input.GetKey(KeyCode.LeftArrow))
                 if (Player.position.x < transform.position.x)
                 {
                     if (rb.velocity.x > -4)
@@ -47,7 +43,6 @@ public class enemyScript : MonoBehaviour
                     transform.localScale = new Vector2(1, 1);
                     m_Animator.SetTrigger("Walk2");
                 }
-                //if (Input.GetKey(KeyCode.RightArrow))
                 if (Player.position.x > transform.position.x)
                 {
                     if (rb.velocity.x < 4)
@@ -58,10 +53,17 @@ public class enemyScript : MonoBehaviour
                     m_Animator.SetTrigger("Walk2");
                 }
             }
-            /*if (Input.GetKey(KeyCode.UpArrow))
+            else
             {
-                rb.velocity = new Vector2(rb.velocity.x, 7);
-            }*/
+                if(rb.velocity.x > 0)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x - 0.3f, rb.velocity.y);
+                }
+                if(rb.velocity.x < 0)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
+                }
+            }
         }
         if (rb.velocity.x == 0)
         {
@@ -89,7 +91,6 @@ public class enemyScript : MonoBehaviour
             }
         }
     }
-
 
     void Attack()
     {
