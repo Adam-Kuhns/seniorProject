@@ -122,4 +122,11 @@ public class guyBehaviourScript : MonoBehaviour
 
 	    healthBar.SetHealth(currentHealth);
 	}
+
+  public void HealDamage(int heal)
+{
+      currentHealth = maxHealth;
+
+    healthBar.SetHealth(currentHealth);
+}
 }
