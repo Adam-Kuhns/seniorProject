@@ -12,6 +12,12 @@ public class guyBehaviourScript : MonoBehaviour
     private GameObject bullet;
     public GameObject bulletPrefab;
 
+    //Jump boost powerup
+    private float jump = 7; //value used in the translate function
+    private float normaljump = 7; //default jump height
+    private float jumpUp = 12; //jump height when the powerup is collected
+    private float jumpUpDuration = 10; // how long the powerup lasts
+
 
     public int maxHealth = 10;
     public int currentHealth;
@@ -74,7 +80,7 @@ public class guyBehaviourScript : MonoBehaviour
                 }
                 if (Input.GetKey(KeyCode.Space))
                 {
-                    rb.velocity = new Vector2(rb.velocity.x, 7);
+                    rb.velocity = new Vector2(rb.velocity.x, jump);
                     m_Animator.SetTrigger("Jump");
                 }
                 if (Input.GetKey(KeyCode.A))
@@ -123,10 +129,22 @@ public class guyBehaviourScript : MonoBehaviour
 	    healthBar.SetHealth(currentHealth);
 	}
 
-  public void HealDamage(int heal)
-{
-      currentHealth = maxHealth;
+    public void HealDamage(int heal)
+    {
+        currentHealth = maxHealth;
 
-    healthBar.SetHealth(currentHealth);
-}
+        healthBar.SetHealth(currentHealth);
+    }
+
+    public void ActivateJumpBoost()
+    {
+        StartCoroutine(JumpBoostCooldown());
+    }
+
+    IEnumerator JumpBoostCooldown()
+    {
+        jump = jumpUp;
+        yield return new WaitForSeconds(jumpUpDuration);
+        jump = normaljump;
+    }
 }
