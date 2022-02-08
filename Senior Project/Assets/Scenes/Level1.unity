@@ -626,7 +626,7 @@ GameObject:
   - component: {fileID: 452960768}
   - component: {fileID: 452960767}
   - component: {fileID: 452960766}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -1034,7 +1034,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 772997302}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1677,7 +1677,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180903872}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -4.5e-44, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.18110943, y: -0.78999996, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1993,7 +1993,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264233310}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -4.5e-44, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.18110943, y: -0.78999996, z: -10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
