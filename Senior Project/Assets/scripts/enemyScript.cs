@@ -41,7 +41,7 @@ public class enemyScript : MonoBehaviour
                         rb.velocity = new Vector2(rb.velocity.x - 0.3f, rb.velocity.y);
                     }
                     transform.localScale = new Vector2(1, 1);
-                    m_Animator.SetTrigger("Walk2");
+                    m_Animator.SetTrigger("Walk");
                 }
                 if (Player.position.x > transform.position.x)
                 {
@@ -50,7 +50,7 @@ public class enemyScript : MonoBehaviour
                         rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
                     }
                     transform.localScale = new Vector2(-1, 1);
-                    m_Animator.SetTrigger("Walk2");
+                    m_Animator.SetTrigger("Walk");
                 }
             }
             else
@@ -67,7 +67,7 @@ public class enemyScript : MonoBehaviour
         }
         if (rb.velocity.x == 0)
         {
-            m_Animator.SetTrigger("StopWalk2");
+            m_Animator.SetTrigger("StopWalk");
         }
     }
 
