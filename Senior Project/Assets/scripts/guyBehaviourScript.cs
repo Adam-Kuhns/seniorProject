@@ -11,6 +11,8 @@ public class guyBehaviourScript : MonoBehaviour
     private Animator m_Animator;
     private GameObject bullet;
     public GameObject bulletPrefab;
+    private float attackRange = 1f;
+    public Transform attackPoint;
 
     //Jump boost powerup
     private float jump = 7; //value used in the translate function
@@ -18,6 +20,8 @@ public class guyBehaviourScript : MonoBehaviour
     private float jumpUp = 12; //jump height when the powerup is collected
     private float jumpUpDuration = 10; // how long the powerup lasts
 
+    private const float gunCooldownTime = 1;
+    private float gunCooldownTimer = 0;
 
     public int maxHealth = 10;
     public int currentHealth;
@@ -39,9 +43,10 @@ public class guyBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.E) && gunCooldownTimer <= 0)
         {
             m_Animator.SetTrigger("Shoot");
+            gunCooldownTimer = gunCooldownTime;
         }
         if (Input.GetKey(KeyCode.A))
         {
@@ -66,6 +71,9 @@ public class guyBehaviourScript : MonoBehaviour
         {
             m_Animator.SetTrigger("StopWalk");
         }
+
+        if(gunCooldownTimer > 0)
+            gunCooldownTimer -= Time.deltaTime;
     }
 
     void OnCollisionStay2D(Collision2D collision)
@@ -101,6 +109,10 @@ public class guyBehaviourScript : MonoBehaviour
                     transform.localScale = new Vector2(1, 1);
                     m_Animator.SetTrigger("Walk");
                 }
+                if (Input.GetKey(KeyCode.F))
+                {
+                    m_Animator.SetTrigger("Bayonet");
+                }
             }
         }
     }
@@ -119,6 +131,19 @@ public class guyBehaviourScript : MonoBehaviour
         {
             bullet = Instantiate(bulletPrefab, new Vector2(transform.position.x - 1f, transform.position.y + 0.2f), Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-15, 0);
+        }
+    }
+
+    void Bayonet()
+    {
+        m_Animator.ResetTrigger("Bayonet");
+        LayerMask mask = LayerMask.GetMask("Enemies");
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, mask);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            Debug.Log(enemy);
+            GameObject.Destroy(enemy.gameObject);
         }
     }
 
