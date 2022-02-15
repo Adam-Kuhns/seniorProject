@@ -76,7 +76,10 @@ public class enemyScript : MonoBehaviour
         foreach (ContactPoint2D contact in collision.contacts) {
           if(collision.gameObject.tag == "bullet")
           {
-            //do nothing to avoid bullet jump
+            Debug.Log("Dying");
+            m_Animator.SetTrigger("Death");
+            rb.velocity = new Vector2(0, rb.velocity.y);
+
           }else{
 
 
