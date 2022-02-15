@@ -74,6 +74,12 @@ public class enemyScript : MonoBehaviour
     void OnCollisionStay2D(Collision2D collision)
     {
         foreach (ContactPoint2D contact in collision.contacts) {
+          if(collision.gameObject.tag == "bullet")
+          {
+            //do nothing to avoid bullet jump
+          }else{
+
+
             if (Mathf.Abs(contact.normal.x) > Mathf.Abs(contact.normal.y))
             {
                 // Horizontal Collision
@@ -90,6 +96,7 @@ public class enemyScript : MonoBehaviour
                 }
             }
         }
+      }
     }
 
     void Attack()
@@ -104,7 +111,7 @@ public class enemyScript : MonoBehaviour
             guy1.TakeDamage(1);
             if(guy1.currentHealth <= 0)
             {
-                
+
               //GameObject.Destroy(enemy.gameObject);
                 SceneManager.LoadScene("DeathMenu");
             }
