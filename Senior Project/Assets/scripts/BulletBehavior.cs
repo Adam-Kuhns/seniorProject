@@ -16,12 +16,17 @@ public class BulletBehavior : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
+
         if(collision.gameObject.tag == "enemy")
         {
             rb.velocity = new Vector2(0, 0);
             b_Animator.SetTrigger("hit");
             collidedWith = collision.gameObject;
+        }else{
+          GameObject.Destroy(gameObject);
         }
+
+
     }
     void KillEnemy(){
         GameObject.Destroy(gameObject);
