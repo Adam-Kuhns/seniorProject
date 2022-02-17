@@ -80,6 +80,9 @@ public class enemyScript : MonoBehaviour
             m_Animator.SetTrigger("Death");
             rb.velocity = new Vector2(0, rb.velocity.y);
 
+          }else if(collision.gameObject.tag == "enemy" || collision.gameObject.tag == "Player")
+          {
+
           }else{
 
 
