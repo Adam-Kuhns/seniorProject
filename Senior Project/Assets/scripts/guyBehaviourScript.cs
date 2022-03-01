@@ -28,6 +28,10 @@ public class guyBehaviourScript : MonoBehaviour
 
     public HealthBar healthBar;
 
+    //Sound stuff
+    public AudioClip jumpSound;
+    public AudioClip pokeSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -132,6 +136,16 @@ public class guyBehaviourScript : MonoBehaviour
             bullet = Instantiate(bulletPrefab, new Vector2(transform.position.x - 1f, transform.position.y + 0.2f), Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-15, 0);
         }
+    }
+
+    void Jump()
+    {
+        GetComponent<AudioSource>().PlayOneShot(jumpSound);
+    }
+
+    void Poke()
+    {
+        GetComponent<AudioSource>().PlayOneShot(pokeSound);
     }
 
     void Bayonet()

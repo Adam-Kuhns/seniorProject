@@ -585,6 +585,7 @@ MonoBehaviour:
   maxHealth: 10
   currentHealth: 0
   healthBar: {fileID: 1039959231}
+  jumpSound: {fileID: 8300000, guid: 350af87eca3c75b45b16a45c7f8fee75, type: 3}
 --- !u!61 &370851273
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2263,7 +2264,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 0d86bdaa81d3292458e7bf88c6800e39, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 0
   Mute: 0
