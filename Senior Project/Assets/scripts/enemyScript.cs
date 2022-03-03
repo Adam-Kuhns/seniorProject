@@ -80,6 +80,13 @@ public class enemyScript : MonoBehaviour
             m_Animator.SetTrigger("Death");
             rb.velocity = new Vector2(0, rb.velocity.y);
 
+            if(animatorStatus() == false)
+            {
+              GameObject.Destroy(gameObject);
+              Debug.Log("Animation Complete");
+              GameObject.Destroy(collision.gameObject);
+            }
+
           }else if(collision.gameObject.tag == "enemy" || collision.gameObject.tag == "Player")
           {
 
@@ -113,7 +120,6 @@ public class enemyScript : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            Debug.Log(enemy);
             guy1.TakeDamage(1);
             if(guy1.currentHealth <= 0)
             {
@@ -122,5 +128,14 @@ public class enemyScript : MonoBehaviour
                 SceneManager.LoadScene("DeathMenu");
             }
         }
+    }
+
+    public bool animatorStatus(){
+      if (m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9)
+      {
+          return true;
+      }else{
+        return false;
+      }
     }
 }

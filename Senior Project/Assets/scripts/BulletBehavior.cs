@@ -28,8 +28,5 @@ public class BulletBehavior : MonoBehaviour
 
 
     }
-    void KillEnemy(){
-        GameObject.Destroy(gameObject);
-        GameObject.Destroy(collidedWith);
-    }
+
 }
