@@ -19,11 +19,13 @@ public class Cannonballbehaviour : MonoBehaviour
 
         if(collision.gameObject.tag == "enemy")
         {
+            rb.velocity = new Vector2(0, 0);
             b_Animator.SetTrigger("explode");
             collidedWith = collision.gameObject;
         }else{
-            GameObject.Destroy(gameObject);
+            rb.velocity = new Vector2(0, 0);
             b_Animator.SetTrigger("explode");
+            //GameObject.Destroy(gameObject);
         }
 
 
