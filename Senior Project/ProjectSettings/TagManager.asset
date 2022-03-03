@@ -7,6 +7,7 @@ TagManager:
   - bullet
   - enemy
   - powerups
+  - cannonball
   layers:
   - Default
   - TransparentFX
