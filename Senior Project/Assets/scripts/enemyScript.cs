@@ -71,45 +71,39 @@ public class enemyScript : MonoBehaviour
         }
     }
 
-    void OnCollisionStay2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        foreach (ContactPoint2D contact in collision.contacts) {
-          if(collision.gameObject.tag == "bullet")
-          {
+        if (collision.gameObject.tag == "bullet")
+        {
             Debug.Log("Dying");
             m_Animator.SetTrigger("Death");
             rb.velocity = new Vector2(0, rb.velocity.y);
+        }
+    }
 
-            if(animatorStatus() == false)
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            if(collision.gameObject.tag != "enemy" && collision.gameObject.tag != "Player")
             {
-              GameObject.Destroy(gameObject);
-              Debug.Log("Animation Complete");
-              GameObject.Destroy(collision.gameObject);
-            }
-
-          }else if(collision.gameObject.tag == "enemy" || collision.gameObject.tag == "Player")
-          {
-
-          }else{
-
-
-            if (Mathf.Abs(contact.normal.x) > Mathf.Abs(contact.normal.y))
-            {
-                // Horizontal Collision
-                rb.velocity = new Vector2(rb.velocity.x, 7);
-                if(contact.normal.x > 0)
+                if (Mathf.Abs(contact.normal.x) > Mathf.Abs(contact.normal.y))
                 {
-                    // Left Side Collision
-                    rb.velocity = new Vector2(-1, rb.velocity.y);
-                }
-                if(contact.normal.x < 0)
-                {
-                    // Right Side Collision
-                    rb.velocity = new Vector2(1, rb.velocity.y);
+                    // Horizontal Collision
+                    rb.velocity = new Vector2(rb.velocity.x, 7);
+                    if(contact.normal.x > 0)
+                    {
+                        // Left Side Collision
+                        rb.velocity = new Vector2(-1, rb.velocity.y);
+                    }
+                    if(contact.normal.x < 0)
+                    {
+                        // Right Side Collision
+                        rb.velocity = new Vector2(1, rb.velocity.y);
+                    }
                 }
             }
         }
-      }
     }
 
     void Attack()
@@ -130,12 +124,8 @@ public class enemyScript : MonoBehaviour
         }
     }
 
-    public bool animatorStatus(){
-      if (m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.9)
-      {
-          return true;
-      }else{
-        return false;
-      }
+    void Destroy()
+    {
+        GameObject.Destroy(gameObject);
     }
 }
