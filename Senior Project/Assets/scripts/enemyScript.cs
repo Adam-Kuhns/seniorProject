@@ -85,23 +85,29 @@ public class enemyScript : MonoBehaviour
     {
         foreach (ContactPoint2D contact in collision.contacts)
         {
-            if(collision.gameObject.tag != "enemy" && collision.gameObject.tag != "Player")
+            switch (collision.gameObject.tag)
             {
-                if (Mathf.Abs(contact.normal.x) > Mathf.Abs(contact.normal.y))
-                {
-                    // Horizontal Collision
-                    rb.velocity = new Vector2(rb.velocity.x, 7);
-                    if(contact.normal.x > 0)
+                case "enemy":
+                case "Player":
+                case "bullet":
+                    break;
+                default:
+                    if (Mathf.Abs(contact.normal.x) > Mathf.Abs(contact.normal.y))
                     {
-                        // Left Side Collision
-                        rb.velocity = new Vector2(-1, rb.velocity.y);
+                        // Horizontal Collision
+                        rb.velocity = new Vector2(rb.velocity.x, 7);
+                        if(contact.normal.x > 0)
+                        {
+                            // Left Side Collision
+                            rb.velocity = new Vector2(-1, rb.velocity.y);
+                        }
+                        if(contact.normal.x < 0)
+                        {
+                            // Right Side Collision
+                            rb.velocity = new Vector2(1, rb.velocity.y);
+                        }
                     }
-                    if(contact.normal.x < 0)
-                    {
-                        // Right Side Collision
-                        rb.velocity = new Vector2(1, rb.velocity.y);
-                    }
-                }
+                    break;
             }
         }
     }
