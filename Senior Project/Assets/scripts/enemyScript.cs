@@ -75,7 +75,6 @@ public class enemyScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "bullet")
         {
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
             Debug.Log("Dying");
             m_Animator.SetTrigger("Death");
             rb.velocity = new Vector2(0, rb.velocity.y);
@@ -84,7 +83,7 @@ public class enemyScript : MonoBehaviour
         {
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             Debug.Log("Dying");
-            m_Animator.SetTrigger("CannonDeath");
+            m_Animator.SetTrigger("Death");
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
     }
