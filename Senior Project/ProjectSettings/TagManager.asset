@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - powerups
   - cannonball
+  - BottomlessPit
   layers:
   - Default
   - TransparentFX

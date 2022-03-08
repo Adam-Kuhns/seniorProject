@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 
 
@@ -78,6 +79,14 @@ public class guyBehaviourScript : MonoBehaviour
 
         if(gunCooldownTimer > 0)
             gunCooldownTimer -= Time.deltaTime;
+    }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if(collider.gameObject.tag == "BottomlessPit")
+        {
+            SceneManager.LoadScene("DeathMenu");
+        }
     }
 
     void OnCollisionStay2D(Collision2D collision)
