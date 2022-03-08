@@ -79,6 +79,13 @@ public class enemyScript : MonoBehaviour
             m_Animator.SetTrigger("Death");
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
+          else if (collision.gameObject.tag == "cannonball")
+          {
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            Debug.Log("Dying");
+            m_Animator.SetTrigger("Death");
+            rb.velocity = new Vector2(0, rb.velocity.y);
+          }
     }
 
     void OnCollisionStay2D(Collision2D collision)
@@ -90,6 +97,7 @@ public class enemyScript : MonoBehaviour
                 case "enemy":
                 case "Player":
                 case "bullet":
+                case "cannonball":
                     break;
                 default:
                     if (Mathf.Abs(contact.normal.x) > Mathf.Abs(contact.normal.y))
