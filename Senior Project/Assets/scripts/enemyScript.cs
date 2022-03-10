@@ -30,39 +30,36 @@ public class enemyScript : MonoBehaviour
         {
             m_Animator.SetTrigger("Attack");
         }
-        if (rb.velocity.y == 0)
+        if (Mathf.Abs(Player.position.x - transform.position.x) >= MinDist)
         {
-            if (Mathf.Abs(Player.position.x - transform.position.x) >= MinDist)
+            if (Player.position.x < transform.position.x)
             {
-                if (Player.position.x < transform.position.x)
-                {
-                    if (rb.velocity.x > -4)
-                    {
-                        rb.velocity = new Vector2(rb.velocity.x - 0.3f, rb.velocity.y);
-                    }
-                    transform.localScale = new Vector2(1, 1);
-                    m_Animator.SetTrigger("Walk");
-                }
-                if (Player.position.x > transform.position.x)
-                {
-                    if (rb.velocity.x < 4)
-                    {
-                        rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
-                    }
-                    transform.localScale = new Vector2(-1, 1);
-                    m_Animator.SetTrigger("Walk");
-                }
-            }
-            else
-            {
-                if(rb.velocity.x > 0)
+                if (rb.velocity.x > -4)
                 {
                     rb.velocity = new Vector2(rb.velocity.x - 0.3f, rb.velocity.y);
                 }
-                if(rb.velocity.x < 0)
+                transform.localScale = new Vector2(1, 1);
+                m_Animator.SetTrigger("Walk");
+            }
+            if (Player.position.x > transform.position.x)
+            {
+                if (rb.velocity.x < 4)
                 {
                     rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
                 }
+                transform.localScale = new Vector2(-1, 1);
+                m_Animator.SetTrigger("Walk");
+            }
+        }
+        else
+        {
+            if(rb.velocity.x > 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x - 0.3f, rb.velocity.y);
+            }
+            if(rb.velocity.x < 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
             }
         }
         if (rb.velocity.x == 0)

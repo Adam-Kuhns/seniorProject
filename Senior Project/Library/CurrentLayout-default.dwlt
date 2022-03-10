@@ -119,10 +119,10 @@ MonoBehaviour:
     y: 30
     width: 1360
     height: 627
-  m_MinSize: {x: 678, y: 492}
+  m_MinSize: {x: 679, y: 492}
   m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 2451
+  controlID: 3492
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,10 +144,10 @@ MonoBehaviour:
     y: 0
     width: 929
     height: 627
-  m_MinSize: {x: 402, y: 492}
+  m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 2452
+  controlID: 3493
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,10 +169,10 @@ MonoBehaviour:
     y: 0
     width: 929
     height: 313
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 2453
+  controlID: 3494
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -399,7 +399,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 1e450000
       m_LastClickedID: 17694
-      m_ExpandedIDs: 46fbffff584400006c440000
+      m_ExpandedIDs: 46fbffffb6440000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -459,9 +459,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.0020337, y: 0.0034732912, z: -371.69882}
+    m_Target: {x: 4.772276, y: -1.9644649, z: -376.53043}
     speed: 2
-    m_Value: {x: 4.0020337, y: 0.0034732912, z: -371.69882}
+    m_Value: {x: 4.772276, y: -1.9644649, z: -376.53043}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -512,9 +512,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 5.128649
+    m_Target: 4.146405
     speed: 2
-    m_Value: 5.128649
+    m_Value: 4.146405
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -765,22 +765,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/player
+    - Assets/scripts
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/player
+  - Assets/scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\TJKun\OneDrive\Documents\GitHub\seniorProject\Senior
     Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 15}
-    m_SelectedIDs: e4470000
-    m_LastClickedID: 18404
+    scrollPos: {x: 0, y: 75}
+    m_SelectedIDs: 2a480000
+    m_LastClickedID: 18474
     m_ExpandedIDs: 00000000dc470000de470000e0470000e2470000e4470000e647000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
