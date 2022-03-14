@@ -89,6 +89,14 @@ public class guyBehaviourScript : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "bullet")
+        {
+            TakeDamage(1);
+        }
+    }
+
     void OnCollisionStay2D(Collision2D collision)
     {
         foreach (ContactPoint2D contact in collision.contacts)
@@ -173,9 +181,12 @@ public class guyBehaviourScript : MonoBehaviour
     public void TakeDamage(int damage)
 	{
         currentHealth -= damage;
-
 	    healthBar.SetHealth(currentHealth);
-	}
+        if (currentHealth <= 0)
+        {
+            SceneManager.LoadScene("DeathMenu");
+        }
+    }
 
     public void HealDamage(int heal)
     {

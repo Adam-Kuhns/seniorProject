@@ -1,0 +1,144 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class BossScript : MonoBehaviour
+{
+    private Rigidbody2D rb;
+    private Animator m_Animator;
+    private GameObject bullet;
+    public GameObject bulletPrefab;
+    public Transform Player;
+    private int DetectionRange = 10;
+    private int MinDist = 5;
+
+    private const float gunCooldownTime = 1;
+    private float gunCooldownTimer = 0;
+
+    public int maxHealth = 10;
+    public int currentHealth;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+        m_Animator = gameObject.GetComponent<Animator>();
+
+        currentHealth = maxHealth;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        // Straight-line distance to player
+        float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
+        if (distanceToPlayer <= DetectionRange && gunCooldownTimer <= 0)
+        {
+            if (Player.position.x < transform.position.x)
+            {
+                transform.localScale = new Vector2(1, 1);
+            }
+            if (Player.position.x > transform.position.x)
+            {
+                transform.localScale = new Vector2(-1, 1);
+            }
+            m_Animator.SetTrigger("Shoot");
+            gunCooldownTimer = gunCooldownTime;
+        }
+        float horizDistanceToPlayer = Mathf.Abs(Player.position.x - transform.position.x);
+        if (horizDistanceToPlayer <= DetectionRange && horizDistanceToPlayer >= MinDist)
+        {
+            if (Player.position.x < transform.position.x)
+            {
+                if (rb.velocity.x > -4)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x - 0.3f, rb.velocity.y);
+                }
+                transform.localScale = new Vector2(1, 1);
+                m_Animator.SetTrigger("Walk");
+            }
+            if (Player.position.x > transform.position.x)
+            {
+                if (rb.velocity.x < 4)
+                {
+                    rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
+                }
+                transform.localScale = new Vector2(-1, 1);
+                m_Animator.SetTrigger("Walk");
+            }
+        }
+
+        if (rb.velocity.x == 0)
+        {
+            m_Animator.SetTrigger("StopWalk");
+        }
+
+        if (gunCooldownTimer > 0)
+            gunCooldownTimer -= Time.deltaTime;
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "bullet")
+        {
+            TakeDamage(1);
+        }
+    }
+
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            switch (collision.gameObject.tag)
+            {
+                case "enemy":
+                case "Player":
+                case "bullet":
+                case "cannonball":
+                    break;
+                default:
+                    if (Mathf.Abs(contact.normal.x) > Mathf.Abs(contact.normal.y))
+                    {
+                        // Horizontal Collision
+                        rb.velocity = new Vector2(rb.velocity.x, 7);
+                        if (contact.normal.x > 0)
+                        {
+                            // Left Side Collision
+                            rb.velocity = new Vector2(-1, rb.velocity.y);
+                        }
+                        if (contact.normal.x < 0)
+                        {
+                            // Right Side Collision
+                            rb.velocity = new Vector2(1, rb.velocity.y);
+                        }
+                    }
+                    break;
+            }
+        }
+    }
+
+    void Shoot()
+    {
+        m_Animator.ResetTrigger("Shoot");
+
+        if (transform.localScale.x > 0)
+        {
+            bullet = Instantiate(bulletPrefab, new Vector2(transform.position.x - 1f, transform.position.y + 0.2f), Quaternion.identity);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(-15, 0);
+        }
+        else
+        {
+            bullet = Instantiate(bulletPrefab, new Vector2(transform.position.x + 1f, transform.position.y + 0.2f), Quaternion.identity);
+            bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(15, 0);
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+        if(currentHealth <= 0)
+        {
+            GameObject.Destroy(gameObject);
+        }
+    }
+}
