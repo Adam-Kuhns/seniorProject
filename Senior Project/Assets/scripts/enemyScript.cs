@@ -127,6 +127,14 @@ public class enemyScript : MonoBehaviour
         }
     }
 
+    public void TakeDamage(int damage)
+    {
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+        Debug.Log("Dying");
+        m_Animator.SetTrigger("Death");
+        rb.velocity = new Vector2(0, rb.velocity.y);
+    }
+
     void Destroy()
     {
         GameObject.Destroy(gameObject);
