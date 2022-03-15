@@ -156,6 +156,7 @@ public class BossScript : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        m_Animator.SetTrigger("hurt");
         if(currentHealth <= 0)
         {
             GameObject.Destroy(gameObject);
