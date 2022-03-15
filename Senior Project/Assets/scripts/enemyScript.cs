@@ -13,9 +13,6 @@ public class enemyScript : MonoBehaviour
     public Transform Player;
     private int MinDist = 1;
 
-    public guyBehaviourScript guy1;
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -126,13 +123,7 @@ public class enemyScript : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            guy1.TakeDamage(1);
-            if(guy1.currentHealth <= 0)
-            {
-
-              //GameObject.Destroy(enemy.gameObject);
-                SceneManager.LoadScene("DeathMenu");
-            }
+            enemy.SendMessage("TakeDamage", 1);
         }
     }
 

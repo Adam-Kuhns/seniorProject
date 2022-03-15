@@ -174,7 +174,7 @@ public class guyBehaviourScript : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log(enemy);
-            GameObject.Destroy(enemy.gameObject);
+            enemy.SendMessage("TakeDamage", 1);
         }
     }
 

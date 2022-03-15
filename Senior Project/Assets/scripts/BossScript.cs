@@ -6,8 +6,12 @@ public class BossScript : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Animator m_Animator;
+    private float bayonetRange = 1f;
+    public Transform attackPoint;
+
     private GameObject bullet;
     public GameObject bulletPrefab;
+
     public Transform Player;
     private int DetectionRange = 10;
     private int MinDist = 5;
@@ -32,6 +36,10 @@ public class BossScript : MonoBehaviour
     {
         // Straight-line distance to player
         float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
+        if (distanceToPlayer <= bayonetRange)
+        {
+            m_Animator.SetTrigger("Bayonet");
+        }
         if (distanceToPlayer <= DetectionRange && gunCooldownTimer <= 0)
         {
             if (Player.position.x < transform.position.x)
@@ -130,6 +138,18 @@ public class BossScript : MonoBehaviour
         {
             bullet = Instantiate(bulletPrefab, new Vector2(transform.position.x + 1f, transform.position.y + 0.2f), Quaternion.identity);
             bullet.GetComponent<Rigidbody2D>().velocity = new Vector2(15, 0);
+        }
+    }
+
+    void Bayonet()
+    {
+        m_Animator.ResetTrigger("Attack");
+        LayerMask mask = LayerMask.GetMask("Players");
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, bayonetRange, mask);
+
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.SendMessage("TakeDamage", 1);
         }
     }
 

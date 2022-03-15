@@ -1423,6 +1423,7 @@ Transform:
   - {fileID: 1631085315}
   - {fileID: 230628661}
   - {fileID: 1415733496}
+  - {fileID: 1838541954}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2088,7 +2089,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 1
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -3315,6 +3316,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1087567303}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1766379485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1766379486}
+  m_Layer: 9
+  m_Name: bAttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1766379486
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766379485}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.201, y: -0.019, z: -324.76346}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1838541954}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1807531458
 GameObject:
@@ -7977,7 +8008,7 @@ GameObject:
   - component: {fileID: 1838541955}
   - component: {fileID: 1838541957}
   - component: {fileID: 1838541958}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: boss
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8042,12 +8073,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838541952}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 18.592142, y: -0.14941713, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6.685033, y: 3.1551201, z: 299.96756}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Children:
+  - {fileID: 1766379486}
+  m_Father: {fileID: 788291160}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1838541955
 BoxCollider2D:
@@ -8127,8 +8159,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bf5c882c10fbf84b836447d4bed4b6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackPoint: {fileID: 1766379486}
   bulletPrefab: {fileID: 8975388125684555458, guid: d1fdac0ccbb50274b83d968b59a1bc1d, type: 3}
   Player: {fileID: 370851276}
+  guy1: {fileID: 370851272}
+  maxHealth: 10
+  currentHealth: 0
 --- !u!1 &1872105727
 GameObject:
   m_ObjectHideFlags: 3
