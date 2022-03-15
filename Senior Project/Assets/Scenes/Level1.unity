@@ -341,7 +341,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 63851569}
   Player: {fileID: 370851276}
-  guy1: {fileID: 370851272}
 --- !u!50 &230628665
 Rigidbody2D:
   serializedVersion: 4
@@ -1000,7 +999,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 772997302}
   Player: {fileID: 370851276}
-  guy1: {fileID: 370851272}
 --- !u!50 &452960769
 Rigidbody2D:
   serializedVersion: 4
@@ -8162,7 +8160,6 @@ MonoBehaviour:
   attackPoint: {fileID: 1766379486}
   bulletPrefab: {fileID: 8975388125684555458, guid: d1fdac0ccbb50274b83d968b59a1bc1d, type: 3}
   Player: {fileID: 370851276}
-  guy1: {fileID: 370851272}
   maxHealth: 10
   currentHealth: 0
 --- !u!1 &1872105727
