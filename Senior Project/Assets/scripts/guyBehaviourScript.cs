@@ -182,6 +182,7 @@ public class guyBehaviourScript : MonoBehaviour
 	{
         currentHealth -= damage;
 	    healthBar.SetHealth(currentHealth);
+        m_Animator.SetTrigger("hurt");
         if (currentHealth <= 0)
         {
             SceneManager.LoadScene("DeathMenu");
