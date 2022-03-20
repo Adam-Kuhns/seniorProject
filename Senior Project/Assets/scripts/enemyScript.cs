@@ -11,6 +11,7 @@ public class enemyScript : MonoBehaviour
     private float attackRange = 1f;
     public Transform attackPoint;
     public Transform Player;
+    private int DetectionRange = 10;
     private int MinDist = 1;
 
     // Start is called before the first frame update
@@ -23,11 +24,13 @@ public class enemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(transform.position, Player.position) <= MinDist)
+        float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
+        if (distanceToPlayer <= MinDist)
         {
             m_Animator.SetTrigger("Attack");
         }
-        if (Mathf.Abs(Player.position.x - transform.position.x) >= MinDist)
+        float horizDistanceToPlayer = Mathf.Abs(Player.position.x - transform.position.x);
+        if (horizDistanceToPlayer <= DetectionRange && horizDistanceToPlayer >= MinDist)
         {
             if (Player.position.x < transform.position.x)
             {
