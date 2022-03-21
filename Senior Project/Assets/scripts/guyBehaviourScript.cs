@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 
 public class guyBehaviourScript : MonoBehaviour
@@ -33,9 +33,20 @@ public class guyBehaviourScript : MonoBehaviour
     public AudioClip jumpSound;
     public AudioClip pokeSound;
 
+    //PowerUp Icon
+    public GameObject[] icons;
+    public Text count;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        //PowerUp Icon
+        icons = GameObject.FindGameObjectsWithTag("Indicator");
+        icons[0].SetActive(false);
+        count = GameObject.Find("boosticonCount").GetComponent<Text>();
+
+
         rb = gameObject.GetComponent<Rigidbody2D>();
         m_Animator = gameObject.GetComponent<Animator>();
 
@@ -199,12 +210,28 @@ public class guyBehaviourScript : MonoBehaviour
     public void ActivateJumpBoost()
     {
         StartCoroutine(JumpBoostCooldown());
+        StartCoroutine(BoostUI());
     }
 
     IEnumerator JumpBoostCooldown()
     {
         jump = jumpUp;
+        icons[0].SetActive(true);
         yield return new WaitForSeconds(jumpUpDuration);
+        icons[0].SetActive(false);
         jump = normaljump;
+        StopCoroutine(BoostUI());
+
+    }
+
+    IEnumerator BoostUI() {
+      for (int i = 10; i >= 0; i--) {
+        if(i == 0){
+          count.text = "";
+        }else{
+          count.text = i.ToString();
+        }
+        yield return new WaitForSeconds(1f);
+      }
     }
 }

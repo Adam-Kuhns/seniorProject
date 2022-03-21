@@ -9,6 +9,7 @@ TagManager:
   - powerups
   - cannonball
   - BottomlessPit
+  - Indicator
   layers:
   - Default
   - TransparentFX
