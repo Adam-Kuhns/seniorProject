@@ -19,7 +19,7 @@ public class levelselect : MonoBehaviour
 
     public void LoadGame()
     {
-      SceneManager.LoadScene (sceneName:"FirstLevel");
+      SceneManager.LoadScene (sceneName:"Level1");
 
     }
 }
