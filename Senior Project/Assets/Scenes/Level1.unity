@@ -309,6 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 427773620}
+  pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
 --- !u!61 &10030207
 BoxCollider2D:
@@ -1099,6 +1100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 63851569}
+  pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
 --- !u!50 &230628665
 Rigidbody2D:
@@ -1383,6 +1385,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 969540954}
+  pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
 --- !u!50 &348312973
 Rigidbody2D:
@@ -2202,6 +2205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 772997302}
+  pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
 --- !u!50 &452960769
 Rigidbody2D:
@@ -2514,7 +2518,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 344, y: 9.300003}
+  m_AnchoredPosition: {x: 344, y: 9.299988}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &477935504
@@ -2854,6 +2858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 1282443683}
+  pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
 --- !u!61 &605689486
 BoxCollider2D:
@@ -3535,6 +3540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 1689627406}
+  pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
 --- !u!50 &965537745
 Rigidbody2D:
@@ -9638,6 +9644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 2094825615}
+  pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
 --- !u!50 &1745223245
 Rigidbody2D:

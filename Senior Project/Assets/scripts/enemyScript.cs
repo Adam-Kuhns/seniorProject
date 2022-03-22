@@ -10,6 +10,7 @@ public class enemyScript : MonoBehaviour
     private Animator m_Animator;
     private float attackRange = 1f;
     public Transform attackPoint;
+    public GameObject pts100Prefab;
     public Transform Player;
     private int DetectionRange = 10;
     private int MinDist = 1;
@@ -140,6 +141,7 @@ public class enemyScript : MonoBehaviour
 
     void Destroy()
     {
+        Instantiate(pts100Prefab, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         GameObject.Destroy(gameObject);
     }
 }
