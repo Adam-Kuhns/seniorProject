@@ -12,7 +12,7 @@ public class guyBehaviourScript : MonoBehaviour
     private Animator m_Animator;
     private GameObject bullet;
     public GameObject bulletPrefab;
-    private float attackRange = 1f;
+    private float attackRange = 0.5f;
     public Transform attackPoint;
 
     //Jump boost powerup
