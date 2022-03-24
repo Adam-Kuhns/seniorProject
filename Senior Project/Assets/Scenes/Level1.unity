@@ -38344,7 +38344,7 @@ MonoBehaviour:
   attackPoint: {fileID: 1766379486}
   bulletPrefab: {fileID: 8975388125684555458, guid: d1fdac0ccbb50274b83d968b59a1bc1d, type: 3}
   Player: {fileID: 370851276}
-  maxHealth: 10
+  maxHealth: 5
   currentHealth: 0
 --- !u!1 &1844150811
 GameObject:
