@@ -19,7 +19,7 @@ public class BossScript : MonoBehaviour
     private const float gunCooldownTime = 1;
     private float gunCooldownTimer = 0;
 
-    public int maxHealth = 10;
+    public int maxHealth = 5;
     public int currentHealth;
 
     // Start is called before the first frame update
