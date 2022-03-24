@@ -14,10 +14,13 @@ public class BulletBehavior : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-
-        if(collision.gameObject.tag == "enemy")
+        if(collider.gameObject.tag == "bullet")
+        {
+            
+        }
+        if(collider.gameObject.tag == "enemy")
         {
             rb.velocity = new Vector2(0, 0);
             b_Animator.SetTrigger("hit");

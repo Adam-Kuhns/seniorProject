@@ -85,9 +85,9 @@ public class BossScript : MonoBehaviour
             gunCooldownTimer -= Time.deltaTime;
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.tag == "bullet")
+        if (collider.gameObject.tag == "bullet")
         {
             TakeDamage(1);
         }

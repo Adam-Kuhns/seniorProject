@@ -78,16 +78,20 @@ public class enemyScript : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collision.gameObject.tag == "bullet")
+        if (collider.gameObject.tag == "bullet")
         {
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             Debug.Log("Dying");
             m_Animator.SetTrigger("Death");
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
-        else if (collision.gameObject.tag == "cannonball")
+    }
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+
+        if (collision.gameObject.tag == "cannonball")
         {
             rb.constraints = RigidbodyConstraints2D.FreezeAll;
             Debug.Log("Dying");

@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class FlagScript : MonoBehaviour
 {
+    private Animator m_Animator;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_Animator = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -22,7 +24,7 @@ public class FlagScript : MonoBehaviour
 
         if (collider.gameObject.tag == "Player" && GameObject.Find("boss") == null)
         {
-            LoadNextLevel();
+            m_Animator.SetTrigger("flagLower");
         }
     }
 

@@ -98,11 +98,7 @@ public class guyBehaviourScript : MonoBehaviour
         {
             SceneManager.LoadScene("DeathMenu");
         }
-    }
-
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "bullet")
+        else if(collider.gameObject.tag == "bullet")
         {
             TakeDamage(1);
         }
