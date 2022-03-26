@@ -97,6 +97,15 @@ public class BossScript : MonoBehaviour
     {
         foreach (ContactPoint2D contact in collision.contacts)
         {
+            if (contact.normal.y > 0)
+            {
+                DodgeIncomingBullets();
+
+                if (m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
+                {
+                    m_Animator.SetTrigger("StopJump");
+                }
+            }
             switch (collision.gameObject.tag)
             {
                 case "enemy":
@@ -150,6 +159,21 @@ public class BossScript : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             enemy.SendMessage("TakeDamage", 1);
+        }
+    }
+
+    void DodgeIncomingBullets()
+    {
+        LayerMask mask = LayerMask.GetMask("Projectiles");
+        Collider2D[] incomingBullets = Physics2D.OverlapCircleAll(transform.position, 2, mask);
+
+        foreach(Collider2D incomingBullet in incomingBullets)
+        {
+            if (!m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Shoot"))
+            {
+                m_Animator.SetTrigger("Jump");
+                rb.velocity = new Vector2(rb.velocity.x, 5);
+            }
         }
     }
 
