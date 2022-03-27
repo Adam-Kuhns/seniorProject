@@ -1513,7 +1513,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 8975388125684555458, guid: d1fdac0ccbb50274b83d968b59a1bc1d, type: 3}
   attackPoint: {fileID: 2064895892}
-  maxHealth: 10
+  maxHealth: 7
   currentHealth: 0
   healthBar: {fileID: 1039959231}
   jumpSound: {fileID: 8300000, guid: 350af87eca3c75b45b16a45c7f8fee75, type: 3}
@@ -5023,7 +5023,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -38256,7 +38256,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1838541952}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 152.5, y: 6.23, z: 299.96756}
+  m_LocalPosition: {x: 152.04, y: 6.59, z: 299.96756}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1766379486}
