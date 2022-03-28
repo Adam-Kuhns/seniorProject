@@ -21,4 +21,9 @@ public class MainMenuStart : MonoBehaviour
     {
         SceneManager.LoadScene("Level Select");
     }
+
+    public void LoadPrologue()
+    {
+        SceneManager.LoadScene("Prologue");
+    }
 }
