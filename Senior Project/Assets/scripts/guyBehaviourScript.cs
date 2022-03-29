@@ -44,7 +44,7 @@ public class guyBehaviourScript : MonoBehaviour
         //PowerUp Icon
         icons = GameObject.FindGameObjectsWithTag("Indicator");
         icons[0].SetActive(false);
-        count = GameObject.Find("boosticonCount").GetComponent<Text>();
+        
 
 
         rb = gameObject.GetComponent<Rigidbody2D>();
