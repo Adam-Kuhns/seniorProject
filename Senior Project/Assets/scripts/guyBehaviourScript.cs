@@ -34,7 +34,7 @@ public class guyBehaviourScript : MonoBehaviour
     public AudioClip pokeSound;
 
     //PowerUp Icon
-    public GameObject[] icons;
+    public GameObject icon;
     public Text count;
 
 
@@ -42,9 +42,9 @@ public class guyBehaviourScript : MonoBehaviour
     void Start()
     {
         //PowerUp Icon
-        icons = GameObject.FindGameObjectsWithTag("Indicator");
-        icons[0].SetActive(false);
-        
+
+        icon.SetActive(false);
+
 
 
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -212,9 +212,9 @@ public class guyBehaviourScript : MonoBehaviour
     IEnumerator JumpBoostCooldown()
     {
         jump = jumpUp;
-        icons[0].SetActive(true);
+        icon.SetActive(true);
         yield return new WaitForSeconds(jumpUpDuration);
-        icons[0].SetActive(false);
+        icon.SetActive(false);
         jump = normaljump;
         StopCoroutine(BoostUI());
 
