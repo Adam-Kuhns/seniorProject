@@ -1518,7 +1518,7 @@ MonoBehaviour:
   healthBar: {fileID: 1039959231}
   jumpSound: {fileID: 8300000, guid: 350af87eca3c75b45b16a45c7f8fee75, type: 3}
   pokeSound: {fileID: 0}
-  icons: []
+  icon: {fileID: 477935502}
   count: {fileID: 0}
 --- !u!61 &370851273
 BoxCollider2D:
@@ -4515,7 +4515,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180903872}
-  m_LocalRotation: {x: -4.5e-44, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.18110943, y: -0.78999996, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5046,7 +5046,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264233310}
-  m_LocalRotation: {x: -4.5e-44, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.18110943, y: -0.78999996, z: -10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
