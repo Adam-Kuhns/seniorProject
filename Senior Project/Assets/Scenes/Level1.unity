@@ -1519,7 +1519,7 @@ MonoBehaviour:
   jumpSound: {fileID: 8300000, guid: 350af87eca3c75b45b16a45c7f8fee75, type: 3}
   pokeSound: {fileID: 0}
   icon: {fileID: 477935502}
-  count: {fileID: 0}
+  count: {fileID: 28875756}
 --- !u!61 &370851273
 BoxCollider2D:
   m_ObjectHideFlags: 0
