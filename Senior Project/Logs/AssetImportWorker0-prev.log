@@ -1,0 +1,339 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.22f1 (e1a7f79fd887) revision 14788599'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Education; OS build 19042.1586; Version 2009; 64bit' Language: 'en' Physical Memory: 8001 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.22f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/ewn07230/Documents/GitHub/project2/Senior Project
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+49678
+Successfully changed project path to: C:/Users/ewn07230/Documents/GitHub/project2/Senior Project
+C:/Users/ewn07230/Documents/GitHub/project2/Senior Project
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 46.03 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.22f1 (e1a7f79fd887)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/ewn07230/Documents/GitHub/project2/Senior Project/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Intel(R) UHD Graphics 630 (ID=0x3e92)
+    Vendor:   
+    VRAM:     4000 MB
+    Driver:   26.20.100.7262
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56664
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.22f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001396 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 44.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.963 seconds
+Domain Reload Profiling:
+	ReloadAssembly (963ms)
+		BeginReloadAssembly (49ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (433ms)
+			LoadAssemblies (47ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (144ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (166ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (3ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (44ms)
+				BeforeProcessingInitializeOnLoad (8ms)
+				ProcessInitializeOnLoadAttributes (82ms)
+				ProcessInitializeOnLoadMethodAttributes (28ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.004175 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 43.72 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.164 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1165ms)
+		BeginReloadAssembly (136ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (967ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (296ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (412ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (44ms)
+				BeforeProcessingInitializeOnLoad (64ms)
+				ProcessInitializeOnLoadAttributes (277ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (5ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2346 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 100.9 MB.
+System memory in use after: 101.1 MB.
+
+Unloading 29 unused Assets to reduce memory usage. Loaded Objects now: 2781.
+Total: 3.307800 ms (FindLiveObjects: 0.211100 ms CreateObjectMapping: 0.098600 ms MarkObjects: 2.937700 ms  DeleteObjects: 0.059400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/Scenery/mountain-trees.png
+  artifactKey: Guid(80193c3fbd3cbfb49a361eb0c6e711a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/mountain-trees.png using Guid(80193c3fbd3cbfb49a361eb0c6e711a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4080cd86b97a29c583ae41407b0c126f') in 0.105163 seconds 
+  Import took 0.108429 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Scenery/TreeAlt.png
+  artifactKey: Guid(612710f8ab46acf49aac01e4bd311bba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/TreeAlt.png using Guid(612710f8ab46acf49aac01e4bd311bba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8e12928e0ffabc00f280f799054f1bb') in 0.020575 seconds 
+  Import took 0.024239 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Scenery/bush3.png
+  artifactKey: Guid(79f63e06e704ba34184f864ba60ae54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/bush3.png using Guid(79f63e06e704ba34184f864ba60ae54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd92bbd347f65d96eb939ee8de1b9cdb5') in 0.017661 seconds 
+  Import took 0.020986 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000286 seconds.
+  path: Assets/Scenery/pixil-frame-0 (11).png
+  artifactKey: Guid(61674ab07a7923e4fad48ff3567761c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/pixil-frame-0 (11).png using Guid(61674ab07a7923e4fad48ff3567761c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bada4b9a92b06b3ce3e89f502aa1bb1') in 0.024032 seconds 
+  Import took 0.027866 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000217 seconds.
+  path: Assets/Scenery/mountain-foreground-trees.png
+  artifactKey: Guid(21be3d4f3058e5a4b94473575bed8c88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/mountain-foreground-trees.png using Guid(21be3d4f3058e5a4b94473575bed8c88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b708fb1db4745d57a032e86cac3e94d7') in 0.021941 seconds 
+  Import took 0.025115 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000248 seconds.
+  path: Assets/Scenery
+  artifactKey: Guid(a000f2ed757985e45b82965f6e6aa652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery using Guid(a000f2ed757985e45b82965f6e6aa652) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f7ac8eae2a72f8c2b0c1638cc645064') in 0.007012 seconds 
+  Import took 0.012241 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000351 seconds.
+  path: Assets/Scenery/mountain-montain-far.png
+  artifactKey: Guid(dbff115e720e2a6489500e0b47b0982a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/mountain-montain-far.png using Guid(dbff115e720e2a6489500e0b47b0982a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7957074112e65ac44580351ba9dbc721') in 0.024796 seconds 
+  Import took 0.028638 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000216 seconds.
+  path: Assets/Scenery/tree3.png
+  artifactKey: Guid(4dd96a98fc5926d4c985301ceba27bfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/tree3.png using Guid(4dd96a98fc5926d4c985301ceba27bfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e8d52427d710bad4ebe0d00c48bf22f') in 0.026119 seconds 
+  Import took 0.029748 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/tiles
+  artifactKey: Guid(1020dbe9ea40a504f819dff218f33126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tiles using Guid(1020dbe9ea40a504f819dff218f33126) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edbad1b2a50e2a72998f882c7d79b727') in 0.007234 seconds 
+  Import took 0.012102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/Scenery/bush1.png
+  artifactKey: Guid(7c89e50f83770cc48b7a4cd7c6d12994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/bush1.png using Guid(7c89e50f83770cc48b7a4cd7c6d12994) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92471c70ca5ebb724f1ad45fbb59b79d') in 0.058400 seconds 
+  Import took 0.064740 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000193 seconds.
+  path: Assets/tiles/pixil-frame-0 (24).png
+  artifactKey: Guid(03d9e70c20ba1b14ea51406b9121ffd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tiles/pixil-frame-0 (24).png using Guid(03d9e70c20ba1b14ea51406b9121ffd3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bf5f830527d3b5e0b9a5555cb262bf3') in 0.027593 seconds 
+  Import took 0.031961 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000156 seconds.
+  path: Assets/tiles/myPalette.prefab
+  artifactKey: Guid(21ef7696ac6182542aa258f63d56fa51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tiles/myPalette.prefab using Guid(21ef7696ac6182542aa258f63d56fa51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0d55c3b1e441234fbd0c7c316a19597') in 0.054186 seconds 
+  Import took 0.057731 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000161 seconds.
+  path: Assets/tiles/Dirt.physicsMaterial2D
+  artifactKey: Guid(4a6d13dcbcd5bfb48b886f673f7b3925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tiles/Dirt.physicsMaterial2D using Guid(4a6d13dcbcd5bfb48b886f673f7b3925) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34ba841b768e3fd0dded785b6ee49455') in 0.009490 seconds 
+  Import took 0.014104 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000425 seconds.
+  path: Assets/tiles/pixil-frame-0 (25).png
+  artifactKey: Guid(48ff3fa1f57dd4249afa400bcbca1006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tiles/pixil-frame-0 (25).png using Guid(48ff3fa1f57dd4249afa400bcbca1006) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be80f4a3a018dac5cd9317a56f8accce') in 0.022553 seconds 
+  Import took 0.026598 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/tiles/pixil-frame-0 (23).asset
+  artifactKey: Guid(d7dd419118d33f64b862431a4d058244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tiles/pixil-frame-0 (23).asset using Guid(d7dd419118d33f64b862431a4d058244) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03567889c9bbf089fae65987cb99bfc1') in 0.030176 seconds 
+  Import took 0.033392 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000243 seconds.
+  path: Assets/Scenery/bush2.png
+  artifactKey: Guid(e8756c4b75f648f4ab789f51e88db802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/bush2.png using Guid(e8756c4b75f648f4ab789f51e88db802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e628ec74aa8f0a588e93f5ad99b4dd9') in 0.023772 seconds 
+  Import took 0.027089 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/tiles/pixil-frame-0 (23).png
+  artifactKey: Guid(765de60ee56642343a39a6f51f322890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tiles/pixil-frame-0 (23).png using Guid(765de60ee56642343a39a6f51f322890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db1a3a3f930c408429049cc2af09f3e5') in 0.022051 seconds 
+  Import took 0.026855 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000289 seconds.
+  path: Assets/Scenery/sky.png
+  artifactKey: Guid(ac645ae63fa80f44aa05e1d9d93caab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/sky.png using Guid(ac645ae63fa80f44aa05e1d9d93caab2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c5fbb00dc030fc0be35ee8b37191052') in 0.026141 seconds 
+  Import took 0.029605 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000177 seconds.
+  path: Assets/tiles/pixil-frame-0 (24).asset
+  artifactKey: Guid(9aa636e1e83374f4d8d71101122bffd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tiles/pixil-frame-0 (24).asset using Guid(9aa636e1e83374f4d8d71101122bffd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b52279b2dda073690cf8886d1825435b') in 0.013453 seconds 
+  Import took 0.021073 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Scenery/tree2.png
+  artifactKey: Guid(775f3a363f35b0f4bafcd252e9127706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/tree2.png using Guid(775f3a363f35b0f4bafcd252e9127706) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8963501acfeb612241fab1adf945d0d8') in 0.020651 seconds 
+  Import took 0.024178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000244 seconds.
+  path: Assets/Scenery/mountain-bg.png
+  artifactKey: Guid(72ca0f21ed8ad5b4e801bb42e435cfc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/mountain-bg.png using Guid(72ca0f21ed8ad5b4e801bb42e435cfc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1795c702eb24d8acdbb296c35521f496') in 0.023231 seconds 
+  Import took 0.026596 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000168 seconds.
+  path: Assets/Scenery/box.png
+  artifactKey: Guid(192a6e377e68770428fbbd397ed37f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/box.png using Guid(192a6e377e68770428fbbd397ed37f87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f1c9a00767c37033f42017b5cdc97ae') in 0.017610 seconds 
+  Import took 0.020907 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000302 seconds.
+  path: Assets/tiles/pixil-frame-0 (25).asset
+  artifactKey: Guid(db7a2545e4567514989384a2c08b29a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/tiles/pixil-frame-0 (25).asset using Guid(db7a2545e4567514989384a2c08b29a6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba573d3030adc253c74549939f12bce3') in 0.015300 seconds 
+  Import took 0.018722 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000197 seconds.
+  path: Assets/Scenery/mountain-mountains.png
+  artifactKey: Guid(1b8280a7393f0a24f80f58e5853364a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenery/mountain-mountains.png using Guid(1b8280a7393f0a24f80f58e5853364a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8df2bb96f137fd04b4af4577b4aede51') in 0.028056 seconds 
+  Import took 0.031257 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.124682 seconds.
+  path: Assets/scripts
+  artifactKey: Guid(0025499a013752e48bc49c11ae4b05bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/scripts using Guid(0025499a013752e48bc49c11ae4b05bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b0250fd25ceb55170ea0991542dee64') in 0.016861 seconds 
+  Import took 0.020157 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.635267 seconds.
+  path: Assets/Scenes
+  artifactKey: Guid(c97224c892bac4641a73b1d155ed08b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes using Guid(c97224c892bac4641a73b1d155ed08b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e888522ca519669d566d9a667b54847c') in 0.007707 seconds 
+  Import took 0.012873 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
