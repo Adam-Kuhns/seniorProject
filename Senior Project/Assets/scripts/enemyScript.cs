@@ -102,6 +102,7 @@ public class enemyScript : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
+        bool isGrounded = false;
         foreach (ContactPoint2D contact in collision.contacts)
         {
             switch (collision.gameObject.tag)
@@ -112,20 +113,19 @@ public class enemyScript : MonoBehaviour
                 case "cannonball":
                     break;
                 default:
-                    if (Mathf.Abs(contact.normal.x) > Mathf.Abs(contact.normal.y))
+                    Debug.Log(contact.normal.x + " " + contact.normal.y);
+                    if(contact.normal.y > 0)
+                    {
+                        isGrounded = true;
+                    }
+                    else if (isGrounded == true && (Mathf.Abs(contact.normal.x) > Mathf.Abs(contact.normal.y)))
                     {
                         // Horizontal Collision
-                        rb.velocity = new Vector2(rb.velocity.x, 7);
-                        if(contact.normal.x > 0)
-                        {
-                            // Left Side Collision
-                            rb.velocity = new Vector2(-1, rb.velocity.y);
-                        }
-                        if(contact.normal.x < 0)
-                        {
-                            // Right Side Collision
-                            rb.velocity = new Vector2(1, rb.velocity.y);
-                        }
+                        rb.velocity = new Vector2(0, 9);
+                    }
+                    else
+                    {
+                        isGrounded = false;
                     }
                     break;
             }
