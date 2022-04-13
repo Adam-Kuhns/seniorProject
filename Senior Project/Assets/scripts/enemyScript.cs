@@ -15,7 +15,7 @@ public class enemyScript : MonoBehaviour
     public Transform Player;
     private int DetectionRange = 10;
     private int MinDist = 1;
-
+    private bool isGrounded = false;
 
 
     public Text pointsBoard;
@@ -39,14 +39,21 @@ public class enemyScript : MonoBehaviour
         {
             m_Animator.SetTrigger("Attack");
         }
+
         float horizDistanceToPlayer = Mathf.Abs(Player.position.x - transform.position.x);
         if (horizDistanceToPlayer <= DetectionRange && horizDistanceToPlayer >= MinDist)
         {
+            float acceleration;
+            if (isGrounded == true)
+                acceleration = 0.3f;
+            else
+                acceleration = 0.1f;
+
             if (Player.position.x < transform.position.x)
             {
                 if (rb.velocity.x > -4)
                 {
-                    rb.velocity = new Vector2(rb.velocity.x - 0.3f, rb.velocity.y);
+                    rb.velocity = new Vector2(rb.velocity.x - acceleration, rb.velocity.y);
                 }
                 transform.localScale = new Vector2(1, 1);
                 m_Animator.SetTrigger("Walk");
@@ -55,7 +62,7 @@ public class enemyScript : MonoBehaviour
             {
                 if (rb.velocity.x < 4)
                 {
-                    rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
+                    rb.velocity = new Vector2(rb.velocity.x + acceleration, rb.velocity.y);
                 }
                 transform.localScale = new Vector2(-1, 1);
                 m_Animator.SetTrigger("Walk");
@@ -102,7 +109,6 @@ public class enemyScript : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        bool isGrounded = false;
         foreach (ContactPoint2D contact in collision.contacts)
         {
             switch (collision.gameObject.tag)
@@ -121,14 +127,25 @@ public class enemyScript : MonoBehaviour
                     else if (isGrounded == true && (Mathf.Abs(contact.normal.x) > Mathf.Abs(contact.normal.y)))
                     {
                         // Horizontal Collision
-                        rb.velocity = new Vector2(0, 9);
-                    }
-                    else
-                    {
-                        isGrounded = false;
+                        rb.velocity = new Vector2(0, 7);
                     }
                     break;
             }
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "enemy":
+            case "Player":
+            case "bullet":
+            case "cannonball":
+                break;
+            default:
+                isGrounded = false;
+                break;
         }
     }
 
