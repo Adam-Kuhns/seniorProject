@@ -11,11 +11,13 @@ public class enemyScript : MonoBehaviour
     private Animator m_Animator;
     private float attackRange = 1f;
     public Transform attackPoint;
+    public Transform depthMeasure;
     public GameObject pts100Prefab;
     public Transform Player;
     private int DetectionRange = 10;
     private int MinDist = 1;
     private bool isGrounded = false;
+    private bool pitDetected = false;
 
 
     public Text pointsBoard;
@@ -41,7 +43,7 @@ public class enemyScript : MonoBehaviour
         }
 
         float horizDistanceToPlayer = Mathf.Abs(Player.position.x - transform.position.x);
-        if (horizDistanceToPlayer <= DetectionRange && horizDistanceToPlayer >= MinDist)
+        if (horizDistanceToPlayer <= DetectionRange && horizDistanceToPlayer >= MinDist && pitDetected == false)
         {
             float acceleration;
             if (isGrounded == true)
@@ -56,6 +58,7 @@ public class enemyScript : MonoBehaviour
                     rb.velocity = new Vector2(rb.velocity.x - acceleration, rb.velocity.y);
                 }
                 transform.localScale = new Vector2(1, 1);
+                depthMeasure.localPosition = new Vector2(-1, -1);
                 m_Animator.SetTrigger("Walk");
             }
             if (Player.position.x > transform.position.x)
@@ -65,6 +68,7 @@ public class enemyScript : MonoBehaviour
                     rb.velocity = new Vector2(rb.velocity.x + acceleration, rb.velocity.y);
                 }
                 transform.localScale = new Vector2(-1, 1);
+                depthMeasure.localPosition = new Vector2(-1, -1);
                 m_Animator.SetTrigger("Walk");
             }
         }
@@ -83,6 +87,7 @@ public class enemyScript : MonoBehaviour
         {
             m_Animator.SetTrigger("StopWalk");
         }
+        DepthMeasure();
     }
 
     void OnTriggerEnter2D(Collider2D collider)
@@ -119,7 +124,7 @@ public class enemyScript : MonoBehaviour
                 case "cannonball":
                     break;
                 default:
-                    Debug.Log(contact.normal.x + " " + contact.normal.y);
+                    //Debug.Log(contact.normal.x + " " + contact.normal.y);
                     if(contact.normal.y > 0)
                     {
                         isGrounded = true;
@@ -159,6 +164,22 @@ public class enemyScript : MonoBehaviour
         {
             enemy.SendMessage("TakeDamage", 1);
         }
+    }
+
+    void DepthMeasure()
+    {
+        LayerMask mask = LayerMask.GetMask("Tilemap");
+        Collider2D[] hitGround = Physics2D.OverlapCircleAll(depthMeasure.position, 0.5f, mask);
+
+        if(hitGround.Length == 0)
+        {
+            pitDetected = true;
+        }
+        else
+        {
+            pitDetected = false;
+        }
+        Debug.Log(hitGround.Length);
     }
 
     public void TakeDamage(int damage)
