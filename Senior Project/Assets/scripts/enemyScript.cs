@@ -144,6 +144,7 @@ public class enemyScript : MonoBehaviour
                     {
                         // Horizontal Collision
                         rb.velocity = new Vector2(0, 7);
+                        isGrounded = false;
                     }
                     break;
             }
