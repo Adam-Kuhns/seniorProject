@@ -166,7 +166,7 @@ public class BossScript : MonoBehaviour
 
     void Fly()
     {
-        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y - 10f);
+        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + 1.4f);
     }
 
     public void TakeDamage(int damage)
