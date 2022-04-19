@@ -91,6 +91,10 @@ public class BossScript : MonoBehaviour
         {
             TakeDamage(1);
         }
+        if(collider.gameObject.tag == "BottomlessPit")
+        {
+            GameObject.Destroy(gameObject);
+        }
     }
 
     void OnCollisionStay2D(Collision2D collision)
@@ -160,13 +164,19 @@ public class BossScript : MonoBehaviour
         }
     }
 
+    void Fly()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y - 10f);
+    }
+
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         m_Animator.SetTrigger("hurt");
         if(currentHealth <= 0)
         {
-            GameObject.Destroy(gameObject);
+            m_Animator.SetTrigger("death");
         }
     }
+    
 }
