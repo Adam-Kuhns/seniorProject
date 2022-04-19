@@ -58,7 +58,7 @@ public class enemyScript : MonoBehaviour
                     rb.velocity = new Vector2(rb.velocity.x - acceleration, rb.velocity.y);
                 }
                 transform.localScale = new Vector2(1, 1);
-                depthMeasure.localPosition = new Vector2(-1, -1);
+                depthMeasure.localPosition = new Vector2(-1, -3);
                 m_Animator.SetTrigger("Walk");
             }
             if (Player.position.x > transform.position.x)
@@ -68,7 +68,7 @@ public class enemyScript : MonoBehaviour
                     rb.velocity = new Vector2(rb.velocity.x + acceleration, rb.velocity.y);
                 }
                 transform.localScale = new Vector2(-1, 1);
-                depthMeasure.localPosition = new Vector2(-1, -1);
+                depthMeasure.localPosition = new Vector2(-1, -3);
                 m_Animator.SetTrigger("Walk");
             }
         }
@@ -88,6 +88,17 @@ public class enemyScript : MonoBehaviour
             m_Animator.SetTrigger("StopWalk");
         }
         DepthMeasure();
+
+        if (Player.position.x < transform.position.x)
+        {
+            transform.localScale = new Vector2(1, 1);
+            depthMeasure.localPosition = new Vector2(-1, -3);
+        }
+        if (Player.position.x > transform.position.x)
+        {
+            transform.localScale = new Vector2(-1, 1);
+            depthMeasure.localPosition = new Vector2(-1, -3);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D collider)
