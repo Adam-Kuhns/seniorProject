@@ -110,6 +110,11 @@ public class enemyScript : MonoBehaviour
             m_Animator.SetTrigger("Death");
             rb.velocity = new Vector2(0, rb.velocity.y);
         }
+
+        if(collider.gameObject.tag == "BottomlessPit")
+        {
+            GameObject.Destroy(gameObject);
+        }
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
