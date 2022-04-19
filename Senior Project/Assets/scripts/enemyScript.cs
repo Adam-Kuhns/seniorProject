@@ -58,7 +58,7 @@ public class enemyScript : MonoBehaviour
                     rb.velocity = new Vector2(rb.velocity.x - acceleration, rb.velocity.y);
                 }
                 transform.localScale = new Vector2(1, 1);
-                depthMeasure.localPosition = new Vector2(-1, -3);
+                depthMeasure.localPosition = new Vector2(-1, 0);
                 m_Animator.SetTrigger("Walk");
             }
             if (Player.position.x > transform.position.x)
@@ -68,7 +68,7 @@ public class enemyScript : MonoBehaviour
                     rb.velocity = new Vector2(rb.velocity.x + acceleration, rb.velocity.y);
                 }
                 transform.localScale = new Vector2(-1, 1);
-                depthMeasure.localPosition = new Vector2(-1, -3);
+                depthMeasure.localPosition = new Vector2(-1, 0);
                 m_Animator.SetTrigger("Walk");
             }
         }
@@ -92,12 +92,12 @@ public class enemyScript : MonoBehaviour
         if (Player.position.x < transform.position.x)
         {
             transform.localScale = new Vector2(1, 1);
-            depthMeasure.localPosition = new Vector2(-1, -3);
+            depthMeasure.localPosition = new Vector2(-1, 0);
         }
         if (Player.position.x > transform.position.x)
         {
             transform.localScale = new Vector2(-1, 1);
-            depthMeasure.localPosition = new Vector2(-1, -3);
+            depthMeasure.localPosition = new Vector2(-1, 0);
         }
     }
 
@@ -136,7 +136,7 @@ public class enemyScript : MonoBehaviour
                     break;
                 default:
                     //Debug.Log(contact.normal.x + " " + contact.normal.y);
-                    if(contact.normal.y > 0)
+                    if (contact.normal.y > 0)
                     {
                         isGrounded = true;
                     }
@@ -181,17 +181,17 @@ public class enemyScript : MonoBehaviour
     void DepthMeasure()
     {
         LayerMask mask = LayerMask.GetMask("Tilemap");
-        Collider2D[] hitGround = Physics2D.OverlapCircleAll(depthMeasure.position, 0.5f, mask);
 
-        if(hitGround.Length == 0)
-        {
-            pitDetected = true;
-        }
-        else
+        RaycastHit2D hit = Physics2D.Raycast(depthMeasure.position, -Vector2.up, Mathf.Infinity, mask);
+
+        if (hit.collider != null)
         {
             pitDetected = false;
         }
-        Debug.Log(hitGround.Length);
+        else
+        {
+            pitDetected = true;
+        }
     }
 
     public void TakeDamage(int damage)
