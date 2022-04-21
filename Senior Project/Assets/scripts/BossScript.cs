@@ -139,6 +139,7 @@ public class BossScript : MonoBehaviour
     void Shoot()
     {
         m_Animator.ResetTrigger("Shoot");
+        GetComponent<AudioSource>().Play();
 
         if (transform.localScale.x > 0)
         {
