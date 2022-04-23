@@ -57,7 +57,7 @@ public class guyBehaviourScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetKey(KeyCode.E) && gunCooldownTimer <= 0)
         {
@@ -68,7 +68,7 @@ public class guyBehaviourScript : MonoBehaviour
         {
             if (rb.velocity.x > -5)
             {
-                rb.velocity = new Vector2(rb.velocity.x - 0.1f, rb.velocity.y);
+                rb.velocity = new Vector2(rb.velocity.x - 0.4f, rb.velocity.y);
             }
             transform.localScale = new Vector2(-1, 1);
             m_Animator.SetTrigger("Walk");
@@ -77,7 +77,7 @@ public class guyBehaviourScript : MonoBehaviour
         {
             if (rb.velocity.x < 5)
             {
-                rb.velocity = new Vector2(rb.velocity.x + 0.1f, rb.velocity.y);
+                rb.velocity = new Vector2(rb.velocity.x + 0.4f, rb.velocity.y);
             }
             transform.localScale = new Vector2(1, 1);
             m_Animator.SetTrigger("Walk");

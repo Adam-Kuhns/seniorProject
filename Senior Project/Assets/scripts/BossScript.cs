@@ -32,7 +32,7 @@ public class BossScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         // Straight-line distance to player
         float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
@@ -60,7 +60,7 @@ public class BossScript : MonoBehaviour
             {
                 if (rb.velocity.x > -4)
                 {
-                    rb.velocity = new Vector2(rb.velocity.x - 0.3f, rb.velocity.y);
+                    rb.velocity = new Vector2(rb.velocity.x - 0.7f, rb.velocity.y);
                 }
                 transform.localScale = new Vector2(1, 1);
                 m_Animator.SetTrigger("Walk");
@@ -69,7 +69,7 @@ public class BossScript : MonoBehaviour
             {
                 if (rb.velocity.x < 4)
                 {
-                    rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
+                    rb.velocity = new Vector2(rb.velocity.x + 0.7f, rb.velocity.y);
                 }
                 transform.localScale = new Vector2(-1, 1);
                 m_Animator.SetTrigger("Walk");

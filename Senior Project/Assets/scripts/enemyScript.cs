@@ -34,7 +34,7 @@ public class enemyScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, Player.position);
         if (distanceToPlayer <= MinDist)
@@ -47,9 +47,9 @@ public class enemyScript : MonoBehaviour
         {
             float acceleration;
             if (isGrounded == true)
-                acceleration = 0.3f;
+                acceleration = 0.7f;
             else
-                acceleration = 0.1f;
+                acceleration = 0.3f;
 
             if (Player.position.x < transform.position.x)
             {
