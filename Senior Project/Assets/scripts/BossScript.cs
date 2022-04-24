@@ -8,6 +8,7 @@ public class BossScript : MonoBehaviour
     private Animator m_Animator;
     private float bayonetRange = 1f;
     public Transform attackPoint;
+    public Transform depthMeasure;
 
     private GameObject bullet;
     public GameObject bulletPrefab;
@@ -15,6 +16,8 @@ public class BossScript : MonoBehaviour
     public Transform Player;
     private int DetectionRange = 10;
     private int MinDist = 5;
+    private bool isGrounded = false;
+    private bool pitDetected = false;
 
     private const float gunCooldownTime = 1;
     private float gunCooldownTimer = 0;
@@ -54,32 +57,51 @@ public class BossScript : MonoBehaviour
             gunCooldownTimer = gunCooldownTime;
         }
         float horizDistanceToPlayer = Mathf.Abs(Player.position.x - transform.position.x);
-        if (horizDistanceToPlayer <= DetectionRange && horizDistanceToPlayer >= MinDist)
+        if (horizDistanceToPlayer <= DetectionRange && horizDistanceToPlayer >= MinDist && pitDetected == false)
         {
+            float acceleration;
+            if (isGrounded == true)
+                acceleration = 0.7f;
+            else
+                acceleration = 0.3f;
+
             if (Player.position.x < transform.position.x)
             {
                 if (rb.velocity.x > -4)
                 {
-                    rb.velocity = new Vector2(rb.velocity.x - 0.7f, rb.velocity.y);
+                    rb.velocity = new Vector2(rb.velocity.x - acceleration, rb.velocity.y);
                 }
                 transform.localScale = new Vector2(1, 1);
+                depthMeasure.localPosition = new Vector2(-1, 0);
                 m_Animator.SetTrigger("Walk");
             }
             if (Player.position.x > transform.position.x)
             {
                 if (rb.velocity.x < 4)
                 {
-                    rb.velocity = new Vector2(rb.velocity.x + 0.7f, rb.velocity.y);
+                    rb.velocity = new Vector2(rb.velocity.x + acceleration, rb.velocity.y);
                 }
                 transform.localScale = new Vector2(-1, 1);
+                depthMeasure.localPosition = new Vector2(-1, 0);
                 m_Animator.SetTrigger("Walk");
             }
         }
-
+        else
+        {
+            if (rb.velocity.x > 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x - 0.3f, rb.velocity.y);
+            }
+            if (rb.velocity.x < 0)
+            {
+                rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
+            }
+        }
         if (rb.velocity.x == 0)
         {
             m_Animator.SetTrigger("StopWalk");
         }
+        DepthMeasure();
 
         if (gunCooldownTimer > 0)
             gunCooldownTimer -= Time.deltaTime;
@@ -116,23 +138,33 @@ public class BossScript : MonoBehaviour
                 case "cannonball":
                     break;
                 default:
-                    if (Mathf.Abs(contact.normal.x) > Mathf.Abs(contact.normal.y))
+                    if(contact.normal.y > 0)
+                    {
+                        isGrounded = true;
+                    }
+                    else if(isGrounded == true && (Mathf.Abs(contact.normal.x) > Mathf.Abs(contact.normal.y)))
                     {
                         // Horizontal Collision
-                        rb.velocity = new Vector2(rb.velocity.x, 7);
-                        if (contact.normal.x > 0)
-                        {
-                            // Left Side Collision
-                            rb.velocity = new Vector2(-1, rb.velocity.y);
-                        }
-                        if (contact.normal.x < 0)
-                        {
-                            // Right Side Collision
-                            rb.velocity = new Vector2(1, rb.velocity.y);
-                        }
+                        rb.velocity = new Vector2(0, 7);
+                        isGrounded = false;
                     }
                     break;
             }
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "enemy":
+            case "Player":
+            case "bullet":
+            case "cannonball":
+                break;
+            default:
+                isGrounded = false;
+                break;
         }
     }
 
@@ -165,6 +197,22 @@ public class BossScript : MonoBehaviour
         }
     }
 
+    void DepthMeasure()
+    {
+        LayerMask mask = LayerMask.GetMask("Tilemap");
+
+        RaycastHit2D hit = Physics2D.Raycast(depthMeasure.position, -Vector2.up, Mathf.Infinity, mask);
+
+        if (hit.collider != null)
+        {
+            pitDetected = false;
+        }
+        else
+        {
+            pitDetected = true;
+        }
+    }
+
     void Fly()
     {
         rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y + 1.4f);
@@ -179,5 +227,4 @@ public class BossScript : MonoBehaviour
             m_Animator.SetTrigger("death");
         }
     }
-    
 }

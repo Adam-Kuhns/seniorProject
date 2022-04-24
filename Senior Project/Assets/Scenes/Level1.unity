@@ -1236,6 +1236,36 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.454875, y: 1.3553461}
   m_EdgeRadius: 0
+--- !u!1 &263023155
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 263023156}
+  m_Layer: 0
+  m_Name: DepthMeasure
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &263023156
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 263023155}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1, y: 0, z: -70.930115}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1838541954}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &287350007
 GameObject:
   m_ObjectHideFlags: 0
@@ -5403,7 +5433,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264233310}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.2057285, y: -0.79000044, z: -10}
+  m_LocalPosition: {x: 3.4243288, y: -0.79000044, z: -10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 643301983}
@@ -10506,7 +10536,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1838541954}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1807531458
 GameObject:
@@ -38676,6 +38706,7 @@ Transform:
   m_LocalPosition: {x: 153.95, y: 6.11, z: 299.96756}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 263023156}
   - {fileID: 1766379486}
   m_Father: {fileID: 788291160}
   m_RootOrder: 6
@@ -38759,6 +38790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackPoint: {fileID: 1766379486}
+  depthMeasure: {fileID: 263023156}
   bulletPrefab: {fileID: 8975388125684555458, guid: d1fdac0ccbb50274b83d968b59a1bc1d, type: 3}
   Player: {fileID: 370851276}
   maxHealth: 5

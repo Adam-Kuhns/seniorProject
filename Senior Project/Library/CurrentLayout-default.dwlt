@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 609, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 809
+  controlID: 6888
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 839
+  controlID: 6889
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -372,10 +372,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 87}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 46fbffff
+      m_ExpandedIDs: eab7ffff46fbffff684400009a440000c4440000d04400000e4500004645000072450000ce4500009e460000ca4600004c930000c09300005a940000a6940000b4940000029500004095000074950000b0950000ce950000e0950000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -435,9 +435,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.25239363, y: -2.0915396, z: -452.15747}
+    m_Target: {x: 204.88712, y: 0.054876436, z: -460.87756}
     speed: 2
-    m_Value: {x: 0.25239363, y: -2.0915396, z: -452.15747}
+    m_Value: {x: 204.88712, y: 0.054876436, z: -460.87756}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -488,9 +488,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 15.028005
+    m_Target: 1.8572235
     speed: 2
-    m_Value: 15.028005
+    m_Value: 1.8572235
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -767,21 +767,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/scripts
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/scripts
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\kevin\Documents\GitHub\seniorProject\Senior Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d44a0000
-    m_LastClickedID: 19156
+    m_SelectedIDs: e24a0000
+    m_LastClickedID: 19170
     m_ExpandedIDs: 00000000d24a0000d44a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
