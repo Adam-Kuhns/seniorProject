@@ -19,16 +19,12 @@ public class enemyScript : MonoBehaviour
     private bool isGrounded = false;
     private bool pitDetected = false;
 
-
-    public Text pointsBoard;
-
+    //public Text pointsBoard;
+    public PointsBoardScript pointsBoard;
 
     // Start is called before the first frame update
     void Start()
     {
-        //points scoreboard
-        pointsBoard = GameObject.Find("pointsBoard").GetComponent<Text>();
-
         rb = gameObject.GetComponent<Rigidbody2D>();
         m_Animator = gameObject.GetComponent<Animator>();
     }
@@ -209,11 +205,7 @@ public class enemyScript : MonoBehaviour
 
     void Destroy()
     {
-        int scoreInt = 0;
-        string currentScore = pointsBoard.text;
-        int.TryParse(currentScore, out scoreInt);
-        scoreInt = scoreInt + 100;
-        pointsBoard.text = scoreInt.ToString();
+        pointsBoard.AddPoints(100);
 
         Instantiate(pts100Prefab, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
         GameObject.Destroy(gameObject);

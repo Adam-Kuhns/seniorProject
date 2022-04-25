@@ -225,7 +225,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 76035089}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1591013322}
 --- !u!61 &51737386
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1555,6 +1555,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 1603461362}
   bulletPrefab: {fileID: 8975388125684555458, guid: d1fdac0ccbb50274b83d968b59a1bc1d, type: 3}
   Player: {fileID: 1591694083}
+  pointsBoard: {fileID: 1591013322}
   maxHealth: 5
   currentHealth: 0
 --- !u!95 &333164094
@@ -20715,7 +20716,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 214680145}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1591013322}
 --- !u!50 &563471786
 Rigidbody2D:
   serializedVersion: 4
@@ -20860,7 +20861,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 728113060}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1591013322}
 --- !u!61 &579362636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21486,7 +21487,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 1298082612}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1591013322}
 --- !u!50 &892104393
 Rigidbody2D:
   serializedVersion: 4
@@ -21717,7 +21718,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 1856688524}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1591013322}
 --- !u!50 &987006112
 Rigidbody2D:
   serializedVersion: 4
@@ -21888,7 +21889,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 1914350680}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1591013322}
 --- !u!50 &1026080010
 Rigidbody2D:
   serializedVersion: 4
@@ -22790,7 +22791,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 2072108732}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1591013322}
 --- !u!50 &1343069302
 Rigidbody2D:
   serializedVersion: 4
@@ -23463,7 +23464,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 1353109249}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1591013322}
 --- !u!50 &1552000161
 Rigidbody2D:
   serializedVersion: 4
@@ -23708,6 +23709,7 @@ GameObject:
   - component: {fileID: 1591013319}
   - component: {fileID: 1591013321}
   - component: {fileID: 1591013320}
+  - component: {fileID: 1591013322}
   m_Layer: 7
   m_Name: pointsBoard
   m_TagString: Untagged
@@ -23776,6 +23778,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1591013318}
   m_CullTransparentMesh: 1
+--- !u!114 &1591013322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591013318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdd21e994b693b4696c9078a12b6446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1591694076
 GameObject:
   m_ObjectHideFlags: 0
@@ -24175,7 +24189,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 490284138}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1591013322}
 --- !u!50 &1606012902
 Rigidbody2D:
   serializedVersion: 4
@@ -24849,7 +24863,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 1898991283}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1591013322}
 --- !u!61 &1959279239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25404,7 +25418,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 201882477}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1591013322}
 --- !u!61 &2097536189
 BoxCollider2D:
   m_ObjectHideFlags: 0

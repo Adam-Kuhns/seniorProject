@@ -312,7 +312,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 287350008}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1494438852}
 --- !u!61 &10030207
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1137,7 +1137,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 838553087}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1494438852}
 --- !u!50 &230628665
 Rigidbody2D:
   serializedVersion: 4
@@ -1484,7 +1484,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 485416403}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1494438852}
 --- !u!50 &348312973
 Rigidbody2D:
   serializedVersion: 4
@@ -2307,7 +2307,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 859592670}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1494438852}
 --- !u!50 &452960769
 Rigidbody2D:
   serializedVersion: 4
@@ -2993,7 +2993,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 1008812442}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1494438852}
 --- !u!61 &605689486
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4128,7 +4128,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 792188983}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1494438852}
 --- !u!50 &965537745
 Rigidbody2D:
   serializedVersion: 4
@@ -6289,6 +6289,7 @@ GameObject:
   - component: {fileID: 1494438849}
   - component: {fileID: 1494438851}
   - component: {fileID: 1494438850}
+  - component: {fileID: 1494438852}
   m_Layer: 7
   m_Name: pointsBoard
   m_TagString: Untagged
@@ -6357,6 +6358,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1494438848}
   m_CullTransparentMesh: 1
+--- !u!114 &1494438852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494438848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bdd21e994b693b4696c9078a12b6446, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1501754348
 GameObject:
   m_ObjectHideFlags: 0
@@ -6369,6 +6382,7 @@ GameObject:
   - component: {fileID: 1501754351}
   - component: {fileID: 1501754350}
   - component: {fileID: 1501754349}
+  - component: {fileID: 1501754353}
   m_Layer: 7
   m_Name: Canvas
   m_TagString: powerups
@@ -6461,6 +6475,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1501754353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1501754348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a9140a5fa8df145ac37ba869dbb252, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1503485437
 GameObject:
   m_ObjectHideFlags: 0
@@ -10337,7 +10363,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 101144335}
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 370851276}
-  pointsBoard: {fileID: 0}
+  pointsBoard: {fileID: 1494438852}
 --- !u!50 &1745223245
 Rigidbody2D:
   serializedVersion: 4
@@ -38793,6 +38819,7 @@ MonoBehaviour:
   depthMeasure: {fileID: 263023156}
   bulletPrefab: {fileID: 8975388125684555458, guid: d1fdac0ccbb50274b83d968b59a1bc1d, type: 3}
   Player: {fileID: 370851276}
+  pointsBoard: {fileID: 1494438852}
   maxHealth: 5
   currentHealth: 0
 --- !u!82 &1838541959

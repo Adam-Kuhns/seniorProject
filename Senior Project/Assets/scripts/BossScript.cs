@@ -19,6 +19,9 @@ public class BossScript : MonoBehaviour
     private bool isGrounded = false;
     private bool pitDetected = false;
 
+    //public Text pointsBoard;
+    public PointsBoardScript pointsBoard;
+
     private const float gunCooldownTime = 1;
     private float gunCooldownTimer = 0;
 
@@ -224,6 +227,7 @@ public class BossScript : MonoBehaviour
         m_Animator.SetTrigger("hurt");
         if(currentHealth <= 0)
         {
+            pointsBoard.AddPoints(1000);
             m_Animator.SetTrigger("death");
         }
     }
