@@ -21,6 +21,7 @@ public class BossScript : MonoBehaviour
 
     //public Text pointsBoard;
     public PointsBoardScript pointsBoard;
+    public AudioSwitch bossMusic;
 
     private const float gunCooldownTime = 1;
     private float gunCooldownTimer = 0;
@@ -62,6 +63,7 @@ public class BossScript : MonoBehaviour
         float horizDistanceToPlayer = Mathf.Abs(Player.position.x - transform.position.x);
         if (horizDistanceToPlayer <= DetectionRange && horizDistanceToPlayer >= MinDist && pitDetected == false)
         {
+            bossMusic.changeMusic();
             float acceleration;
             if (isGrounded == true)
                 acceleration = 0.7f;
