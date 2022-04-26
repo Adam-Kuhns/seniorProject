@@ -1,16 +1,9 @@
-Name: WIP
+Name: MadBlade 
 
 Summary:
-A 2d platform fighter that has movment objectives like checkpoints that the players fight for.
+A level based 2d platform fighter that has movement objectives like checkpoints that the players fight for.
 - We could also add other incentives to move like power-ups
-
-Modes:
-1v1
-1v1 Checkpoints
-  The game can go in two different directions depending on which player is winning. There is a level progression for each direction.
-1vComputer Mode, multiple difficulties
-2vBoss
-2vComputer
+- boss fight at end of levels
 
 
 Graphics:
@@ -18,8 +11,7 @@ Display layout set up in blocks that are 32x32.
 
 
 Levels:
-Minimum 4 levels to play on. Aim for 6-8+. Not all levels have to support all modes. Levels change to force players to move. Avoid instant death/bottomless pits in levels. 
-Screen are 32 tiles wide.
+A couple of different levels aim for 2-4 with different themes like plains, desert, ice 
 
 Level ideas:
 Normal green fields setting level
@@ -33,9 +25,8 @@ Rooftop Level
 
 
 Characters:
-We need 2 characters to make the game work but 12 is ideal for the completed project.
-Characters are 32 by 32 animated sprites. Each character has a special attack that charges up overtime. This attack does more damage and to a larger area. 
-Characters have different special attacks. 
+We need 2 characters  designs to make the game work but 3-5 is ideal for the completed project.
+Characters are 48 by 96 animated sprites. Each character has different weapons boss and player have a variety of attacks and more health.
 
 Range
 Low range (e.g. sword, hammer, mace): high damage
@@ -46,7 +37,8 @@ Long range (e.g. bow and arrow, gun): low damage
 Powerups:
 Powerups either give you a new abillity or they increase damage or range for a limited time.
 Examples:
-Sheild that breaks after taking a certain amount of damge
+Jump boost that helps you clear obstacles etc for a limited time 
+Sheild that breaks after taking a certain amount of damage
 A mace that is like a sword but with longer range
 Healthpacks that replenish 25% or 50% health
 Gun upgrade that ups shooter damage for a short time
@@ -63,7 +55,3 @@ Options
 Gamemode select
 Level Select
 Character select
-
-MadBlade
-
-The game name is based on a sword in the game called the MadBlade. It is extremely powerful but slowly drives the user insane the more that they use it.
