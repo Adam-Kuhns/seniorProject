@@ -32,6 +32,6 @@ public class Cannonballbehaviour : MonoBehaviour
     }
     void KillEnemy(){
         GameObject.Destroy(gameObject);
-        GameObject.Destroy(collidedWith);
+        collidedWith.SendMessage("TakeDamage", 1);
     }
 }

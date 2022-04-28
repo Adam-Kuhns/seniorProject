@@ -48,12 +48,12 @@ public class cannon : MonoBehaviour
         if (transform.localScale.x < 0)
         {
             cannonball = Instantiate(cannonballPrefab, new Vector2(transform.position.x + 1.70f, transform.position.y + 0.2f), Quaternion.identity);
-            cannonball.GetComponent<Rigidbody2D>().velocity = new Vector2(15, 0);
+            cannonball.GetComponent<Rigidbody2D>().velocity = new Vector2(25, 0);
         }
         else
         {
             cannonball = Instantiate(cannonballPrefab, new Vector2(transform.position.x - 1.70f, transform.position.y + 0.2f), Quaternion.identity);
-            cannonball.GetComponent<Rigidbody2D>().velocity = new Vector2(-15, 0);
+            cannonball.GetComponent<Rigidbody2D>().velocity = new Vector2(-25, 0);
         }
     }
 }
