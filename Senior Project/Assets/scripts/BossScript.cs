@@ -192,7 +192,7 @@ public class BossScript : MonoBehaviour
 
     void Bayonet()
     {
-        m_Animator.ResetTrigger("Attack");
+        m_Animator.ResetTrigger("Bayonet");
         LayerMask mask = LayerMask.GetMask("Players");
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, bayonetRange, mask);
 
