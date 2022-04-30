@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 8975388125684555456}
   - component: {fileID: 8975388125684555457}
   - component: {fileID: 3172989854108436655}
-  - component: {fileID: 5074328013050054367}
   m_Layer: 10
   m_Name: bulletPrefab
   m_TagString: bullet
@@ -145,22 +144,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 828c5f74b589dfb42a6b458099ab2699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!95 &5074328013050054367
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8975388125684555458}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ae9fd42b26954d64e8dc6ca286c14c4b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  bloodPrefab: {fileID: 4044704454975147178, guid: c3bc8f0b113b49a48a5b5da103b39c8d, type: 3}

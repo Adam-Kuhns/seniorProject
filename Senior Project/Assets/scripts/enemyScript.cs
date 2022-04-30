@@ -22,11 +22,15 @@ public class enemyScript : MonoBehaviour
     //public Text pointsBoard;
     public PointsBoardScript pointsBoard;
 
+    public int maxHealth = 2;
+    public int currentHealth;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
         m_Animator = gameObject.GetComponent<Animator>();
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
@@ -101,10 +105,11 @@ public class enemyScript : MonoBehaviour
     {
         if (collider.gameObject.tag == "bullet")
         {
-            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            /*rb.constraints = RigidbodyConstraints2D.FreezeAll;
             Debug.Log("Dying");
             m_Animator.SetTrigger("Death");
-            rb.velocity = new Vector2(0, rb.velocity.y);
+            rb.velocity = new Vector2(0, rb.velocity.y);*/
+            TakeDamage(1);
         }
 
         if(collider.gameObject.tag == "BottomlessPit")
@@ -197,10 +202,14 @@ public class enemyScript : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        rb.constraints = RigidbodyConstraints2D.FreezeAll;
-        Debug.Log("Dying");
-        m_Animator.SetTrigger("Death");
-        rb.velocity = new Vector2(0, rb.velocity.y);
+        currentHealth -= damage;
+        if(currentHealth <= 0)
+        {
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            Debug.Log("Dying");
+            m_Animator.SetTrigger("Death");
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
     }
 
     void Destroy()

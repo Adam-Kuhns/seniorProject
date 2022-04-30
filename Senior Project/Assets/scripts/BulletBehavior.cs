@@ -8,6 +8,8 @@ public class BulletBehavior : MonoBehaviour
     private Animator b_Animator;
     private Rigidbody2D rb;
 
+    public GameObject bloodPrefab;
+
     void Start()
     {
         b_Animator = gameObject.GetComponent<Animator>();
@@ -23,7 +25,9 @@ public class BulletBehavior : MonoBehaviour
         if(collider.gameObject.tag == "enemy")
         {
             rb.velocity = new Vector2(0, 0);
-            b_Animator.SetTrigger("hit");
+            //b_Animator.SetTrigger("hit");
+            Instantiate(bloodPrefab, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+            Destroy();
         } else {
             Destroy();
         }
