@@ -16,20 +16,27 @@ public class BulletBehavior : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
+    void OnBecameInvisible()
+    {
+        Debug.Log("Invisible");
+        Destroy();
+    }
+
     void OnTriggerEnter2D(Collider2D collider)
     {
-        if(collider.gameObject.tag == "bullet")
+        switch (collider.gameObject.tag)
         {
-            
-        }
-        if(collider.gameObject.tag == "enemy")
-        {
-            rb.velocity = new Vector2(0, 0);
-            //b_Animator.SetTrigger("hit");
-            Instantiate(bloodPrefab, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
-            Destroy();
-        } else {
-            Destroy();
+            case "bullet":
+            case "flag":
+                break;
+            case "enemy":
+                rb.velocity = new Vector2(0, 0);
+                Instantiate(bloodPrefab, new Vector2(transform.position.x, transform.position.y), Quaternion.identity);
+                Destroy();
+                break;
+            default:
+                Destroy();
+                break;
         }
     }
 

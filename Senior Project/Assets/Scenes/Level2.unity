@@ -226,6 +226,8 @@ MonoBehaviour:
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
   pointsBoard: {fileID: 1591013322}
+  maxHealth: 2
+  currentHealth: 0
 --- !u!61 &51737386
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -452,7 +454,7 @@ GameObject:
   - component: {fileID: 91069323}
   m_Layer: 0
   m_Name: flag
-  m_TagString: Untagged
+  m_TagString: flag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3135,7 +3137,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 479636949}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.192709, y: -0.7900014, z: -10}
+  m_LocalPosition: {x: 5.424329, y: -0.7900014, z: -10}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 1209008810}
@@ -20830,6 +20832,8 @@ MonoBehaviour:
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
   pointsBoard: {fileID: 1591013322}
+  maxHealth: 2
+  currentHealth: 0
 --- !u!50 &563471786
 Rigidbody2D:
   serializedVersion: 4
@@ -20975,6 +20979,8 @@ MonoBehaviour:
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
   pointsBoard: {fileID: 1591013322}
+  maxHealth: 2
+  currentHealth: 0
 --- !u!61 &579362636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21683,6 +21689,8 @@ MonoBehaviour:
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
   pointsBoard: {fileID: 1591013322}
+  maxHealth: 2
+  currentHealth: 0
 --- !u!50 &892104393
 Rigidbody2D:
   serializedVersion: 4
@@ -21914,6 +21922,8 @@ MonoBehaviour:
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
   pointsBoard: {fileID: 1591013322}
+  maxHealth: 2
+  currentHealth: 0
 --- !u!50 &987006112
 Rigidbody2D:
   serializedVersion: 4
@@ -22085,6 +22095,8 @@ MonoBehaviour:
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
   pointsBoard: {fileID: 1591013322}
+  maxHealth: 2
+  currentHealth: 0
 --- !u!50 &1026080010
 Rigidbody2D:
   serializedVersion: 4
@@ -22993,6 +23005,8 @@ MonoBehaviour:
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
   pointsBoard: {fileID: 1591013322}
+  maxHealth: 2
+  currentHealth: 0
 --- !u!50 &1343069302
 Rigidbody2D:
   serializedVersion: 4
@@ -23666,6 +23680,8 @@ MonoBehaviour:
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
   pointsBoard: {fileID: 1591013322}
+  maxHealth: 2
+  currentHealth: 0
 --- !u!50 &1552000161
 Rigidbody2D:
   serializedVersion: 4
@@ -24391,6 +24407,8 @@ MonoBehaviour:
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
   pointsBoard: {fileID: 1591013322}
+  maxHealth: 2
+  currentHealth: 0
 --- !u!50 &1606012902
 Rigidbody2D:
   serializedVersion: 4
@@ -25311,6 +25329,8 @@ MonoBehaviour:
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
   pointsBoard: {fileID: 1591013322}
+  maxHealth: 2
+  currentHealth: 0
 --- !u!61 &1959279239
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -25948,6 +25968,8 @@ MonoBehaviour:
   pts100Prefab: {fileID: 6972934916566385967, guid: 594f7b756b884e9479cc670e76325697, type: 3}
   Player: {fileID: 1591694083}
   pointsBoard: {fileID: 1591013322}
+  maxHealth: 2
+  currentHealth: 0
 --- !u!61 &2097536189
 BoxCollider2D:
   m_ObjectHideFlags: 0

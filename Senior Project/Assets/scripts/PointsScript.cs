@@ -15,7 +15,7 @@ public class PointsScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (displayTimer > 0)
             displayTimer -= Time.deltaTime;

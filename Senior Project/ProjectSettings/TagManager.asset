@@ -10,6 +10,7 @@ TagManager:
   - cannonball
   - BottomlessPit
   - Indicator
+  - flag
   layers:
   - Default
   - TransparentFX
