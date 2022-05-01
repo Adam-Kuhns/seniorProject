@@ -14,8 +14,8 @@ public class BossScript : MonoBehaviour
     public GameObject bulletPrefab;
 
     public Transform Player;
-    private int DetectionRange = 10;
-    private int MinDist = 5;
+    private int DetectionRange = 12;
+    private int MinDist = 8;
     private bool isGrounded = false;
     private bool pitDetected = false;
 
@@ -47,7 +47,7 @@ public class BossScript : MonoBehaviour
         {
             m_Animator.SetTrigger("Bayonet");
         }
-        if (distanceToPlayer <= DetectionRange && gunCooldownTimer <= 0)
+        if (distanceToPlayer <= DetectionRange && distanceToPlayer > bayonetRange && gunCooldownTimer <= 0)
         {
             if (Player.position.x < transform.position.x)
             {
@@ -101,6 +101,11 @@ public class BossScript : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x + 0.3f, rb.velocity.y);
             }
+        }
+        if (DetectIncomingBullets() == true && isGrounded == true)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 7);
+            m_Animator.SetTrigger("Jump");
         }
         if (rb.velocity.x == 0)
         {
@@ -200,6 +205,25 @@ public class BossScript : MonoBehaviour
         {
             enemy.SendMessage("TakeDamage", 1);
         }
+    }
+
+    bool DetectIncomingBullets()
+    {
+        LayerMask mask = LayerMask.GetMask("Projectiles");
+        Collider2D[] closeBullets = Physics2D.OverlapCircleAll(transform.position, 3f, mask);
+
+        foreach(Collider2D closeBullet in closeBullets)
+        {
+            Transform bTransform = closeBullet.gameObject.GetComponent<Transform>();
+            Rigidbody2D bRigidbody = closeBullet.gameObject.GetComponent<Rigidbody2D>();
+
+            if((bTransform.position.x < transform.position.x && bRigidbody.velocity.x > 0) ||
+                (bTransform.position.x > transform.position.x && bRigidbody.velocity.x < 0))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     void DepthMeasure()

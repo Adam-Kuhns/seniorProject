@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 609, y: 492}
   m_MaxSize: {x: 18004, y: 14042}
   vertical: 0
-  controlID: 8571
+  controlID: 21249
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 8572
+  controlID: 21250
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -372,10 +372,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
+      scrollPos: {x: 0, y: 55}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 4e1dfffff61dffff46fbffff0046000080460000bc4600001c240100
+      m_ExpandedIDs: c6faffffe8440000344500003046000042470000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -435,9 +435,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.3733501, y: -2.3652387, z: -94.90947}
+    m_Target: {x: 161.98807, y: 6.284726, z: -102.90216}
     speed: 2
-    m_Value: {x: 2.3733501, y: -2.3652387, z: -94.90947}
+    m_Value: {x: 161.98807, y: 6.284726, z: -102.90216}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -488,9 +488,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 11.4556875
+    m_Target: 6.175037
     speed: 2
-    m_Value: 11.4556875
+    m_Value: 6.175037
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -665,14 +665,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.46744385
+    - e00: 0.5644067
       e01: 0
       e02: 0
-      e03: 138.94217
+      e03: 105.74106
       e10: 0
-      e11: 0.46744385
+      e11: 0.5644067
       e12: 0
-      e13: -69.80791
+      e13: -102.12746
       e20: 0
       e21: 0
       e22: 1
@@ -714,9 +714,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: ae9fd42b26954d64e8dc6ca286c14c4b, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 126aea6fc6f9f424fb20f2d2d5c71c73, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: -5804314614283847951, guid: ae9fd42b26954d64e8dc6ca286c14c4b, type: 2}
+  - m_Target: {fileID: 4624119745404452397, guid: 126aea6fc6f9f424fb20f2d2d5c71c73, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -767,22 +767,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/enemies/boss
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/enemies/boss
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\kevin\Documents\GitHub\seniorProject\Senior Project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 46.799988}
-    m_SelectedIDs: 664c0000
-    m_LastClickedID: 19558
-    m_ExpandedIDs: 00000000da4b0000dc4b0000e04b0000e24b0000644c00009e5d000000ca9a3b
+    m_SelectedIDs: d64b0000
+    m_LastClickedID: 19414
+    m_ExpandedIDs: 00000000c44b0000c64b0000c84b0000ca4b0000cc4b0000ce4b0000d04b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -810,7 +810,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000da4b0000dc4b0000e04b0000e24b0000644c00009e5d000000ca9a3b
+    m_ExpandedIDs: 00000000c44b0000c64b0000c84b0000ca4b0000cc4b0000ce4b0000d04b000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -837,7 +837,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 2e4700003e470000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
