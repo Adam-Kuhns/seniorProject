@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: e8e95b88f9159dc4eb80ff03fba6c65e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Eight Bit Dragon
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 6dab75231f0cab344b8d58abb4e1ef77, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

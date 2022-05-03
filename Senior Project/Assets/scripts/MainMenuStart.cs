@@ -26,4 +26,9 @@ public class MainMenuStart : MonoBehaviour
     {
         SceneManager.LoadScene("Prologue");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
