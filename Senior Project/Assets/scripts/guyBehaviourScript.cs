@@ -36,11 +36,19 @@ public class guyBehaviourScript : MonoBehaviour
     //PowerUp Icon
     public GameObject icon;
     public Text count;
+    public GameObject resume;
+    public GameObject mainMenu;
+    public GameObject quit;
+    public Text pauseText;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        pauseText.text = "";
+        resume.SetActive(false);
+        mainMenu.SetActive(false);
+        quit.SetActive(false);
         //PowerUp Icon
 
         icon.SetActive(false);
@@ -59,6 +67,15 @@ public class guyBehaviourScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
+        if (Input.GetKey(KeyCode.Escape)){
+          pauseText.text = "PAUSED";
+          resume.SetActive(true);
+          mainMenu.SetActive(true);
+          quit.SetActive(true);
+          Time.timeScale = 0;
+        }
+
         if (Input.GetKey(KeyCode.E) && gunCooldownTimer <= 0)
         {
             m_Animator.SetTrigger("Shoot");
@@ -207,6 +224,26 @@ public class guyBehaviourScript : MonoBehaviour
     {
         StartCoroutine(JumpBoostCooldown());
         StartCoroutine(BoostUI());
+    }
+
+    public void ResumeGame()
+    {
+      pauseText.text = "";
+      resume.SetActive(false);
+      mainMenu.SetActive(false);
+      quit.SetActive(false);
+      Time.timeScale = 1f;
+    }
+
+    public void MainMenu()
+    {
+      SceneManager.LoadScene("MainMenu");
+      Time.timeScale = 1f;
+    }
+
+    public void Quit()
+    {
+      Application.Quit();
     }
 
     IEnumerator JumpBoostCooldown()
