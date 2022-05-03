@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class FlagScript : MonoBehaviour
 {
     private Animator m_Animator;
+    public string nextScene;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +31,6 @@ public class FlagScript : MonoBehaviour
 
     public void LoadNextLevel()
     {
-        SceneManager.LoadScene(sceneName: "Level2");
+        SceneManager.LoadScene(sceneName: nextScene);
     }
 }
