@@ -30,7 +30,6 @@ ScriptsOnlyBuild:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.IK.Editor.dll:
     - UnityEditor.U2D.IK.IKEditorManager
-    - UnityEditor.U2D.IK.IKGizmos
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
     - UnityEditor.Tilemaps.GridPaletteBrushes
@@ -283,7 +282,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6178}
     - Class: 114
-      Script: {instanceID: 26206}
+      Script: {instanceID: 19132}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -410,7 +409,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6178}
     - Class: 114
-      Script: {instanceID: 26206}
+      Script: {instanceID: 19132}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1476,4 +1475,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Level2.unity
   - Assets/Scenes/Prologue.unity
   - Assets/Scenes/Epilogue.unity
-  playerPath: C:/Users/ewn07230/Documents/GitHub/project2/Senior Project/Senior Project.exe
+  playerPath: C:/Users/kevin/Documents/GitHub/seniorProject/Senior Project/Senior
+    Project.exe
